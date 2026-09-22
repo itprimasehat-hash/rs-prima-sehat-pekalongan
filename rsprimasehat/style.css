@@ -1,0 +1,10066 @@
+/* ============================================================
+   RS PRIMA SEHAT PEKALONGAN
+   MODERN HOSPITAL WEBSITE
+   Clean • Elegant • Modern • Medical • Trustworthy
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root{
+    --primary:#087f8c;
+    --primary-dark:#05616c;
+    --primary-deep:#034f59;
+    --cyan:#18a9b8;
+    --navy:#12343b;
+    --text:#304b52;
+    --muted:#71848a;
+    --white:#ffffff;
+    --bg:#f3fafb;
+    --surface:rgba(255,255,255,.94);
+    --surface-soft:rgba(255,255,255,.84);
+    --line:rgba(8,127,140,.12);
+    --shadow-sm:0 8px 25px rgba(18,52,59,.07);
+    --shadow-md:0 16px 40px rgba(18,52,59,.11);
+    --shadow-lg:0 25px 65px rgba(18,52,59,.15);
+    --radius:20px;
+    --radius-sm:13px;
+    --max:1220px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:95px;
+}
+
+body{
+    min-height:100vh;
+    font-family:"DM Sans","Segoe UI",Arial,sans-serif;
+    color:var(--text);
+    line-height:1.7;
+    background:
+        linear-gradient(rgba(240,249,250,.72),rgba(240,249,250,.78)),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    overflow-x:hidden;
+}
+
+body,
+.profil-body,
+.dokter-body,
+.dokter-umum-body,
+.dokter-anak-body,
+.dokter-kandungan-body,
+.dokter-bedah-body,
+.dokter-dalam-body,
+.dokter-laboratorium-body{
+    background-image:
+        linear-gradient(rgba(240,249,250,.72),rgba(240,249,250,.78)),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+h1,h2,h3,h4,h5{
+    font-family:"Manrope","Segoe UI",Arial,sans-serif;
+    color:var(--navy);
+    line-height:1.2;
+}
+h1,h2{font-weight:800}
+p{font-size:15px}
+img{max-width:100%}
+
+.container,
+.dokter-container,
+.layanan-container,
+.kontak-container,
+.media-container,
+.mediasosial-container{
+    width:min(92%,var(--max));
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    width:100%;
+    min-height:82px;
+    padding:10px max(4%,calc((100% - var(--max))/2));
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    background:rgba(255,255,255,.91);
+    border-bottom:1px solid rgba(255,255,255,.95);
+    box-shadow:0 5px 25px rgba(18,52,59,.08);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+}
+
+.logo img{
+    width:57px;
+    height:57px;
+    object-fit:contain;
+    filter:drop-shadow(0 5px 12px rgba(8,127,140,.14));
+    transition:transform .3s ease;
+}
+
+.logo:hover img{transform:scale(1.04)}
+
+.logo span{
+    font-family:"Manrope",sans-serif;
+    color:var(--navy);
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:-.4px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:3px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 14px;
+    border-radius:10px;
+    color:#294249;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:color .25s ease,background .25s ease;
+}
+
+nav a:hover{
+    color:var(--primary);
+    background:rgba(8,127,140,.065);
+}
+
+nav a.active{
+    color:var(--primary);
+    background:rgba(8,127,140,.07);
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:3px;
+    width:0;
+    height:3px;
+    border-radius:99px;
+    background:linear-gradient(90deg,var(--primary),var(--cyan));
+    transform:translateX(-50%);
+    transition:width .25s ease;
+}
+
+nav a:hover::after,
+nav a.active::after{width:48%}
+
+.hero{
+    position:relative;
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    padding:90px max(5%,calc((100% - var(--max))/2));
+    overflow:hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.94) 0%,
+            rgba(255,255,255,.82) 45%,
+            rgba(255,255,255,.45) 100%
+        ),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:560px;
+    height:560px;
+    right:-250px;
+    top:-220px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(23,169,184,.16),transparent 68%);
+    pointer-events:none;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    left:-260px;
+    bottom:-250px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(8,127,140,.10),transparent 70%);
+    pointer-events:none;
+}
+
+.hero > div{
+    position:relative;
+    z-index:2;
+    width:min(100%,820px);
+    animation:heroIn .8s ease both;
+}
+
+.hero h1{
+    max-width:850px;
+    margin-bottom:22px;
+    color:var(--primary);
+    font-size:clamp(42px,5.4vw,70px);
+    line-height:1.05;
+    letter-spacing:-2.6px;
+}
+
+.hero h1 span{color:var(--navy)}
+
+.hero p{
+    max-width:700px;
+    margin-bottom:32px;
+    color:#476169;
+    font-size:clamp(16px,1.4vw,19px);
+    line-height:1.8;
+}
+
+.button,
+.back-button,
+.btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:49px;
+    padding:13px 25px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--primary-dark),var(--cyan));
+    color:#fff;
+    text-decoration:none;
+    font:700 14px "DM Sans",sans-serif;
+    box-shadow:0 10px 26px rgba(8,127,140,.22);
+    overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.button::before,
+.back-button::before,
+.btn::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.25) 50%,transparent 80%);
+    transform:translateX(-120%);
+    transition:transform .55s ease;
+}
+
+.button:hover::before,
+.back-button:hover::before,
+.btn:hover::before{transform:translateX(120%)}
+
+.button:hover,
+.back-button:hover,
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 34px rgba(8,127,140,.28);
+}
+
+.section-header,
+.dokter-header,
+.profil-header,
+.dokter-anak-header,
+.dokter-kandungan-header,
+.dokter-bedah-header,
+.dokter-dalam-header,
+.dokter-laboratorium-header,
+.dokter-umum-header{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-header::before,
+.dokter-header::before,
+.profil-header::before{
+    content:"";
+    display:block;
+    width:44px;
+    height:4px;
+    margin:0 auto 14px;
+    border-radius:99px;
+    background:linear-gradient(90deg,var(--primary),var(--cyan));
+}
+
+.section-header h2,
+.dokter-header h2,
+.profil-header h2,
+.dokter-anak-header h2,
+.dokter-kandungan-header h2,
+.dokter-bedah-header h2,
+.dokter-dalam-header h2,
+.dokter-laboratorium-header h2,
+.dokter-umum-header h2{
+    color:var(--primary);
+    font-size:clamp(29px,3.5vw,42px);
+    letter-spacing:-1px;
+}
+
+.section-header p,
+.dokter-header p,
+.profil-header p,
+.dokter-anak-header p,
+.dokter-kandungan-header p,
+.dokter-bedah-header p,
+.dokter-dalam-header p,
+.dokter-laboratorium-header p,
+.dokter-umum-header p{
+    max-width:730px;
+    margin:10px auto 0;
+    color:var(--muted);
+}
+
+.container{
+    width:min(92%,var(--max));
+    margin:70px auto 90px;
+    padding:50px;
+    text-align:center;
+    background:rgba(255,255,255,.80);
+    border:1px solid rgba(255,255,255,.92);
+    border-radius:26px;
+    box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(9px);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:25px;
+}
+
+.card{
+    position:relative;
+    padding:30px 27px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--cyan));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+
+.card:hover::before{transform:scaleX(1)}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+    font-size:20px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:15px;
+}
+
+.layanan-container{
+    margin-top:70px;
+    margin-bottom:90px;
+}
+
+.layanan-grid,
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:25px;
+}
+
+.layanan-card,
+.service-card{
+    position:relative;
+    padding:30px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.layanan-card:hover,
+.service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.layanan-card h3,
+.service-card h3{
+    color:var(--primary);
+    margin:14px 0 8px;
+}
+
+.layanan-card p,
+.service-card p{color:var(--muted)}
+
+.profil-page{
+    width:100%;
+    min-height:calc(100vh - 82px);
+    padding:72px 5% 95px;
+    background:
+        linear-gradient(rgba(240,249,250,.60),rgba(240,249,250,.67)),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.profil-header,
+.profil-box{
+    width:min(100%,1050px);
+    margin:0 auto 24px;
+    padding:32px;
+    background:rgba(255,255,255,.91);
+    border:1px solid rgba(255,255,255,.95);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(10px);
+}
+
+.profil-header{
+    text-align:center;
+    border-top:4px solid var(--primary);
+}
+
+.profil-box{border-left:4px solid var(--primary)}
+
+.profil-header h2,
+.profil-box h2,
+.profil-box h3{color:var(--primary)}
+
+.profil-box h2{
+    margin-bottom:11px;
+    font-size:29px;
+}
+
+.profil-box h3{
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.profil-box p{color:#52686e}
+.profil-page .misi p{margin-bottom:3px}
+
+.dokter-container{
+    margin-top:70px;
+    margin-bottom:90px;
+}
+
+.dokter-spesialis{margin-bottom:68px}
+
+.dokter-spesialis > h2,
+.dokter-umum > h2{
+    margin-bottom:30px;
+    text-align:center;
+    color:var(--primary);
+    font-size:29px;
+}
+
+.dokter-spesialis > h2::after,
+.dokter-umum > h2::after{
+    content:"";
+    display:block;
+    width:55px;
+    height:3px;
+    margin:11px auto 0;
+    border-radius:99px;
+    background:var(--cyan);
+}
+
+.dokter-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:26px;
+}
+
+.dokter-card{
+    overflow:hidden;
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:22px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .35s ease,box-shadow .35s ease;
+}
+
+.dokter-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
+}
+
+.foto-dokter{
+    position:relative;
+    width:100%;
+    height:320px;
+    overflow:hidden;
+    background:#e7f5f7;
+}
+
+.foto-dokter img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.foto-dokter::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,transparent 60%,rgba(8,127,140,.12));
+    pointer-events:none;
+}
+
+.dokter-card:hover .foto-dokter img{transform:scale(1.035)}
+
+.info-dokter{
+    padding:22px 23px 24px;
+    text-align:center;
+}
+
+.info-dokter h3{
+    margin-bottom:5px;
+    color:var(--navy);
+    font-size:19px;
+}
+
+.info-dokter p{
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+}
+
+.nama-dokter{
+    width:100%;
+    margin-top:12px;
+    text-align:left!important;
+}
+
+.nama-dokter h3{
+    display:block!important;
+    margin:0!important;
+    padding:9px 0;
+    color:#52686e;
+    font-size:15px;
+    font-weight:500;
+    line-height:1.5;
+    border-bottom:1px solid #e6eef0;
+}
+
+.dokter-umum-container,
+.dokter-anak-container,
+.dokter-kandungan-container,
+.dokter-bedah-container,
+.dokter-dalam-container,
+.dokter-laboratorium-container{
+    width:min(92%,var(--max));
+    margin:70px auto 90px;
+}
+
+.dokter-umum-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:24px;
+}
+
+.dokter-umum-card{
+    overflow:hidden;
+    padding-bottom:20px;
+    text-align:center;
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:20px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.dokter-umum-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.dokter-umum-card img{
+    display:block;
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.dokter-umum-card h3{
+    margin:16px 15px 3px;
+    color:var(--navy);
+    font-size:16px;
+}
+
+.dokter-umum-card p{
+    margin:0 15px;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+}
+
+/* ============================================================
+   KARTU DOKTER POLI
+   Diperlebar agar foto + informasi berada dalam satu kolom
+   ============================================================ */
+
+.dokter-anak-grid,
+.dokter-kandungan-grid,
+.dokter-bedah-grid,
+.dokter-dalam-grid,
+.dokter-laboratorium-grid{
+    display:grid;
+    grid-template-columns: minmax(520px, 580px);
+    justify-content:center;
+    align-items:start;
+    gap:28px;
+}
+
+.dokter-anak-card,
+.dokter-kandungan-card,
+.dokter-bedah-card,
+.dokter-dalam-card,
+.dokter-laboratorium-card{
+    width:100%;
+    max-width:580px;
+    margin:0 auto;
+    overflow:hidden;
+
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:21px;
+    box-shadow:var(--shadow-sm);
+
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.dokter-anak-card:hover,
+.dokter-kandungan-card:hover,
+.dokter-bedah-card:hover,
+.dokter-dalam-card:hover,
+.dokter-laboratorium-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.dokter-anak-card img,
+.dokter-kandungan-card img,
+.dokter-bedah-card img,
+.dokter-dalam-card img,
+.dokter-laboratorium-card img{
+    display:block;
+    width:100%;
+    height:340px;
+    object-fit:cover;
+}
+
+/* ============================================================
+   NAMA & SPESIALIS DOKTER POLI
+   Posisi tepat di tengah kartu
+   ============================================================ */
+
+.dokter-anak-card h3,
+.dokter-kandungan-card h3,
+.dokter-bedah-card h3,
+.dokter-dalam-card h3,
+.dokter-laboratorium-card h3{
+    display:block;
+    width:100%;
+    margin:18px 0 5px;
+    padding:0 20px;
+
+    text-align:center;
+
+    color:var(--navy);
+    font-size:20px;
+    font-weight:800;
+    line-height:1.3;
+}
+
+.dokter-anak-card > p,
+.dokter-kandungan-card > p,
+.dokter-bedah-card > p,
+.dokter-dalam-card > p,
+.dokter-laboratorium-card > p{
+    display:block;
+    width:100%;
+    margin:0 0 20px;
+    padding:0 20px;
+
+    text-align:center;
+
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.kontak-container,
+.media-container,
+.mediasosial-container{
+    margin-top:70px;
+    margin-bottom:90px;
+}
+
+.kontak-grid,
+.contact-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:26px;
+}
+
+.kontak-box,
+.kontak-card,
+.contact-card{
+    padding:31px;
+    background:rgba(255,255,255,.93);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+}
+
+.kontak-box h3,
+.kontak-card h3,
+.contact-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.kontak-container .button,
+.kontak-container .back-button,
+.kontak-container .btn,
+.kontak-box .button,
+.kontak-box .back-button,
+.kontak-box .btn,
+.contact-card .button,
+.contact-card .back-button,
+.contact-card .btn{
+    display:flex;
+    width:max-content;
+    margin:20px auto 0;
+}
+
+.media-grid,
+.mediasosial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
+}
+
+.media-card,
+.mediasosial-card{
+    padding:31px 25px;
+    text-align:center;
+    background:rgba(255,255,255,.93);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.media-card:hover,
+.mediasosial-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.media-card h3,
+.mediasosial-card h3{
+    margin:13px 0 5px;
+    color:var(--primary);
+}
+
+footer{
+    margin-top:0;
+    padding:60px max(5%,calc((100% - var(--max))/2)) 25px;
+    color:rgba(255,255,255,.80);
+    background:
+        radial-gradient(circle at 10% 0%,rgba(56,210,220,.14),transparent 30%),
+        linear-gradient(135deg,#064c57,#087f8c 55%,#0b9aaa);
+}
+
+.footer-container,
+.footer-content{
+    width:100%;
+    max-width:var(--max);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:42px;
+}
+
+footer h3,
+footer h4{
+    margin-bottom:13px;
+    color:#fff;
+}
+
+footer p,
+footer li,
+footer a{
+    color:rgba(255,255,255,.75);
+    font-size:14px;
+}
+
+footer a{
+    text-decoration:none;
+    transition:color .2s ease,padding .2s ease;
+}
+
+footer a:hover{
+    color:#fff;
+    padding-left:4px;
+}
+
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+
+.footer-bottom{
+    width:100%;
+    max-width:var(--max);
+    margin:38px auto 0;
+    padding-top:19px;
+    border-top:1px solid rgba(255,255,255,.16);
+    text-align:center;
+    color:rgba(255,255,255,.58);
+    font-size:13px;
+}
+
+@keyframes heroIn{
+    from{opacity:0;transform:translateY(22px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:1050px){
+
+    header{
+        padding-left:4%;
+        padding-right:4%;
+    }
+
+    .cards,
+    .layanan-grid,
+    .service-grid,
+    .dokter-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .dokter-anak-grid,
+    .dokter-kandungan-grid,
+    .dokter-bedah-grid,
+    .dokter-dalam-grid,
+    .dokter-laboratorium-grid{
+        grid-template-columns:repeat(auto-fit,minmax(280px,320px));
+        justify-content:center;
+    }
+
+    .dokter-umum-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .footer-container,
+    .footer-content{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+
+    header{
+        position:relative;
+        min-height:auto;
+        padding:12px 16px;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .logo span{font-size:16px}
+
+    .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        gap:1px;
+    }
+
+    nav a{
+        padding:7px 7px;
+        font-size:11.5px;
+    }
+
+    .hero{
+        min-height:570px;
+        padding:70px 7%;
+        text-align:center;
+        background:
+            linear-gradient(rgba(255,255,255,.89),rgba(255,255,255,.74)),
+            url("bkg.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    .hero > div{width:100%}
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1.2px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.72;
+    }
+
+    .container{
+        width:92%;
+        padding:38px 20px;
+    }
+
+    .cards,
+    .layanan-grid,
+    .service-grid,
+    .dokter-grid,
+    .dokter-umum-grid,
+    .dokter-anak-grid,
+    .dokter-kandungan-grid,
+    .dokter-bedah-grid,
+    .dokter-dalam-grid,
+    .dokter-laboratorium-grid,
+    .kontak-grid,
+    .contact-grid,
+    .media-grid,
+    .mediasosial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dokter-container,
+    .dokter-umum-container,
+    .dokter-anak-container,
+    .dokter-kandungan-container,
+    .dokter-bedah-container,
+    .dokter-dalam-container,
+    .dokter-laboratorium-container,
+    .kontak-container,
+    .media-container,
+    .mediasosial-container{
+        width:92%;
+        margin-top:55px;
+        margin-bottom:70px;
+    }
+
+    .foto-dokter{height:310px}
+
+    .dokter-umum-card img,
+    .dokter-anak-card img,
+    .dokter-kandungan-card img,
+    .dokter-bedah-card img,
+    .dokter-dalam-card img,
+    .dokter-laboratorium-card img{
+        height:300px;
+    }
+
+    .profil-page{
+        padding:52px 4% 70px;
+    }
+
+    .profil-header,
+    .profil-box{
+        padding:27px 21px;
+    }
+
+    footer{
+        padding:43px 22px 22px;
+    }
+
+    .footer-container,
+    .footer-content{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .kontak-container .button,
+    .kontak-container .back-button,
+    .kontak-container .btn,
+    .kontak-box .button,
+    .kontak-box .back-button,
+    .kontak-box .btn,
+    .contact-card .button,
+    .contact-card .back-button,
+    .contact-card .btn{
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media(max-width:420px){
+
+    .logo span{font-size:14.5px}
+
+    nav a{
+        font-size:10.5px;
+        padding:6px 5px;
+    }
+
+    .hero{min-height:520px}
+
+    .hero h1{font-size:34px}
+
+    .button,
+    .back-button,
+    .btn{
+        width:100%;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+    }
+}
+
+/* ============================================================
+   HILANGKAN FOOTER SEMUA HALAMAN DOKTER POLI
+   ============================================================ */
+
+body.dokter-umum-body footer,
+body.dokter-anak-body footer,
+body.dokter-kandungan-body footer,
+body.dokter-bedah-body footer,
+body.dokter-dalam-body footer,
+body.dokter-laboratorium-body footer{
+    display:none !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer{
+    width:100%;
+    text-align:center;
+}
+
+footer > p{
+    width:100%;
+    margin:0 auto !important;
+    text-align:center;
+}
+
+/* ============================================================
+   INFORMASI DOKTER - DI BAWAH FOTO
+   ============================================================ */
+
+.dokter-info{
+    width:90%;
+    margin:22px auto 0;
+    padding:18px 20px;
+    background:rgba(235,248,250,.90);
+    border-radius:14px;
+    text-align:left;
+}
+
+.info-row{
+    display:grid;
+    grid-template-columns:28px 125px 15px 1fr;
+    align-items:start;
+    gap:5px;
+    margin-bottom:13px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.info-row:last-child{
+    margin-bottom:0;
+}
+
+.info-icon{
+    font-size:17px;
+}
+
+.info-row strong{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.titik{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.info-row span:last-child{
+    color:#456675;
+}
+
+/* ============================================================
+   KHUSUS POLI LABORATORIUM
+   2 DOKTER BERJEJERAN
+   ============================================================ */
+
+body.dokter-laboratorium-body .dokter-laboratorium-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+    justify-content:center;
+    max-width:1180px;
+    margin:0 auto;
+}
+
+body.dokter-laboratorium-body .dokter-laboratorium-card{
+    width:100%;
+    max-width:580px;
+    margin:0 auto;
+}
+
+/* ============================================================
+   KERJA SAMA ASURANSI
+   ============================================================ */
+
+.asuransi-section{
+    width:min(92%,var(--max));
+    margin:70px auto 90px;
+}
+
+.asuransi-grid{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:24px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.asuransi-card{
+    min-height:175px;
+    padding:25px 18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.94);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.asuransi-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+
+.asuransi-card img{
+    display:block;
+    width:100%;
+    max-width:220px;
+    height:140px;
+    object-fit:contain;
+    margin-bottom:12px;
+}
+
+.asuransi-card span{
+    color:var(--navy);
+    font-size:14px;
+    font-weight:700;
+    text-align:center;
+}
+
+/* ============================================================
+   HALAMAN MEDIA SOSIAL
+   Kartu disusun vertikal
+   ============================================================ */
+
+.media-page{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto;
+    text-align:center;
+}
+
+.media-page h2{
+    font-size:32px;
+    color:var(--primary);
+    margin-bottom:40px;
+}
+
+.media-page .cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+}
+
+.media-page .card{
+    width:100%;
+    max-width:600px;
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:20px 30px;
+    background:rgba(255,255,255,.95);
+    border:1px solid var(--line);
+    border-radius:18px;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.media-page .card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
+}
+
+.media-page .social-icon{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.media-page .instagram{
+    background:#fce4ec;
+    color:#d81b60;
+}
+
+.media-page .facebook{
+    background:#e3f2fd;
+    color:#1877f2;
+}
+
+.media-page .tiktok{
+    background:#eeeeee;
+    color:#111;
+}
+
+.media-page .email{
+    background:#e0f7fa;
+    color:var(--primary);
+}
+
+.media-page .card h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+}
+
+/* ============================================================
+   BUTTON LOKASI
+   ============================================================ */
+
+.button-lokasi{
+    display:block;
+    width:fit-content;
+    margin-top:12px;
+}
+
+/* ============================================================
+   HALAMAN KONTAK
+   Kartu disusun vertikal
+   ============================================================ */
+
+.kontak-page{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto 90px;
+    text-align:center;
+}
+
+.kontak-page h2{
+    font-size:32px;
+    color:var(--primary);
+    margin-bottom:40px;
+}
+
+.kontak-page .cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+.kontak-page .card{
+    width:100%;
+    max-width:700px;
+    min-height:122px;
+    padding:25px 30px;
+    background:rgba(255,255,255,.95);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.kontak-page .card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
+}
+
+.kontak-page .card h3{
+    font-size:20px;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.kontak-page .card a{
+    display:inline-block;
+    color:#1677a8;
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    transition:color .2s ease;
+}
+
+.kontak-page .card a:hover{
+    color:var(--primary);
+    text-decoration:underline;
+}
+
+/* ============================================================
+   PROMO BERANDA
+   Ukuran asli promo: 1080 x 1350 (rasio 4:5)
+   ============================================================ */
+
+.promo-section{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+}
+
+.promo-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.promo-header h2{
+    font-size:30px;
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.promo-header p{
+    color:var(--muted);
+    font-size:16px;
+}
+
+.promo-slider{
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    padding:10px 5px 20px;
+    scroll-behavior:smooth;
+    scrollbar-width:thin;
+}
+
+.promo-slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.promo-slider::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+.promo-slider::-webkit-scrollbar-track{
+    background:#e8f2f4;
+    border-radius:20px;
+}
+
+.promo-card{
+    flex:0 0 300px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.promo-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-md);
+}
+
+.promo-card img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 5;
+    object-fit:contain;
+}
+
+/* ============================================================
+   RESPONSIVE - ASURANSI
+   ============================================================ */
+
+@media(max-width:1050px){
+    .asuransi-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - MEDIA SOSIAL & KONTAK
+   ============================================================ */
+
+@media(max-width:700px){
+    .media-page{
+        width:92%;
+        margin:40px auto;
+    }
+
+    .media-page h2,
+    .kontak-page h2{
+        font-size:25px;
+    }
+
+    .media-page .card{
+        max-width:100%;
+        padding:16px 20px;
+        gap:18px;
+    }
+
+    .media-page .social-icon{
+        width:52px;
+        height:52px;
+        font-size:25px;
+    }
+
+    .kontak-page{
+        width:92%;
+        margin:40px auto 70px;
+    }
+
+    .kontak-page .card{
+        max-width:100%;
+        padding:22px 20px;
+    }
+
+    .asuransi-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:14px;
+    }
+
+    .asuransi-card{
+        min-height:145px;
+        padding:18px 10px;
+    }
+
+    .asuransi-card img{
+        max-width:100%;
+        height:120px;
+        margin-bottom:8px;
+    }
+
+    .asuransi-card span{
+        font-size:12px;
+    }
+
+    .promo-section{
+        width:92%;
+        margin:40px auto;
+    }
+
+    .promo-header h2{
+        font-size:25px;
+    }
+
+    .promo-card{
+        flex:0 0 85%;
+    }
+
+    .promo-card img{
+        width:100%;
+        height:auto;
+        aspect-ratio:4 / 5;
+        object-fit:contain;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - HP KECIL
+   ============================================================ */
+
+@media(max-width:420px){
+    .media-page .card{
+        padding:15px 16px;
+        gap:14px;
+    }
+
+    .media-page .social-icon{
+        width:48px;
+        height:48px;
+        font-size:23px;
+    }
+
+    .media-page .card h3{
+        font-size:17px;
+    }
+
+    .kontak-page .card{
+        padding:20px 16px;
+    }
+
+    .kontak-page .card h3{
+        font-size:18px;
+    }
+
+    .kontak-page .card a{
+        font-size:16px;
+    }
+
+    .asuransi-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+
+    .asuransi-card{
+        min-height:130px;
+        padding:14px 8px;
+    }
+
+    .asuransi-card img{
+        height:100px;
+    }
+
+    .promo-card{
+        flex:0 0 90%;
+    }
+}
+
+/* ============================================================
+    FOTO PROFIL RUMAH SAKIT
+============================================================ */
+
+.foto-profil {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.foto-profil img {
+    width: 100%;
+    max-width: 850px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================================
+ HEADER PROFIL
+============================================================ */
+
+.profil-header {
+    text-align: center;
+}
+
+.profil-header h2 {
+    font-size: 32px;
+    color: #087f8c;
+    margin-bottom: 15px;
+}
+
+.profil-header p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+    BERANDA FINAL
+    RS PRIMA SEHAT PEKALONGAN
+    Tambahan untuk index.html versi terbaru
+    ============================================================ */
+
+/* ============================================================
+    HERO LABEL
+    ============================================================ */
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: rgba(8, 127, 140, 0.08);
+    border: 1px solid rgba(8, 127, 140, 0.12);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ============================================================
+ TOMBOL HERO
+ ============================================================ */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .button-lokasi {
+    margin-top: 0;
+}
+
+/* ============================================================
+ QUICK ACCESS
+ ============================================================ */
+
+.quick-section {
+    position: relative;
+    z-index: 5;
+    width: min(92%, 1100px);
+    margin: -45px auto 70px;
+}
+
+.quick-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.quick-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 105px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 18px;
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.quick-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(8, 127, 140, 0.22);
+}
+
+.quick-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 24px;
+}
+
+.quick-card h3 {
+    margin-bottom: 3px;
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.quick-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* ============================================================
+    LABEL SECTION
+    ============================================================ */
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+ LINK PADA CARD LAYANAN
+ ============================================================ */
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 27px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.card-link:hover {
+    color: var(--primary-dark);
+}
+
+/* ============================================================
+    DOKTER DI BERANDA
+    ============================================================ */
+
+.home-doctor-section {
+    width: min(92%, var(--max));
+    margin: 70px auto 90px;
+    padding: 65px 50px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(236, 249, 250, 0.88)
+        );
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(10px);
+}
+
+.home-doctor-content {
+    width: min(100%, 850px);
+    margin: 0 auto;
+}
+
+.home-doctor-box {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: var(--shadow-sm);
+}
+
+.home-doctor-icon {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 44px;
+}
+
+.home-doctor-box h3 {
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.home-doctor-box p {
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+/* ============================================================
+    FASILITAS
+    ============================================================ */
+
+.facility-section {
+    width: min(92%, var(--max));
+    margin: 70px auto 90px;
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.facility-card {
+    padding: 28px 22px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.facility-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 29px;
+}
+
+.facility-card h3 {
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.facility-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.facility-button {
+    margin-top: 32px;
+    text-align: center;
+}
+
+/* ============================================================
+    ASURANSI - PENYESUAIAN BERANDA
+    ============================================================ */
+
+.asuransi-section {
+    padding-top: 10px;
+}
+
+.asuransi-section .section-header {
+    width: min(92%, 760px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asuransi-card {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+/* ============================================================
+    CALL TO ACTION
+    ============================================================ */
+
+.home-cta {
+    width: min(92%, var(--max));
+    margin: 20px auto 90px;
+    padding: 65px 40px;
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(3, 79, 89, 0.97),
+            rgba(8, 127, 140, 0.94)
+        );
+    border-radius: 28px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.home-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: auto;
+}
+
+.home-cta .section-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.home-cta h2 {
+    margin-bottom: 13px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.home-cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.home-cta .hero-buttons {
+    justify-content: center;
+}
+
+.home-cta .button {
+    background: #ffffff;
+    color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.home-cta .button:hover {
+    color: var(--primary-dark);
+}
+
+/* ============================================================
+    FOOTER BERANDA
+    ============================================================ */
+
+.footer-brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    max-width: 330px;
+}
+
+.footer-links, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-links h4, .footer-contact h4 {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    margin-bottom: 8px;
+}
+
+.footer-contact p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+    RESPONSIVE TABLET
+    ============================================================ */
+
+@media (max-width: 1050px) {
+
+.quick-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.facility-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.home-doctor-section {
+    padding: 50px 35px;
+}
+}
+
+/* ============================================================
+    RESPONSIVE MOBILE
+    ============================================================ */
+
+@media (max-width: 700px) {
+
+.hero-label {
+    font-size: 11px;
+    padding: 7px 12px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-buttons .button {
+    width: 100%;
+}
+
+.quick-section {
+    width: 92%;
+    margin: -25px auto 55px;
+}
+
+.quick-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.quick-card {
+    min-height: 85px;
+    padding: 16px;
+}
+
+.quick-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+}
+
+.home-doctor-section {
+    width: 92%;
+    margin: 55px auto 70px;
+    padding: 38px 20px;
+}
+
+.home-doctor-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 27px 20px;
+}
+
+.home-doctor-box p {
+    margin-bottom: 20px;
+}
+
+.facility-section {
+    width: 92%;
+    margin: 55px auto 70px;
+}
+
+.facility-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.facility-card {
+    padding: 25px 20px;
+}
+
+.home-cta {
+    width: 92%;
+    margin: 10px auto 70px;
+    padding: 45px 22px;
+    border-radius: 22px;
+}
+
+.home-cta .hero-buttons {
+    width: 100%;
+}
+
+.footer-brand, .footer-links, .footer-contact {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-links a:hover {
+    padding-left: 0;
+}
+}
+
+/* ============================================================
+ HP KECIL
+ ============================================================ */
+
+ @media (max-width: 420px) { .quick-card {
+    padding: 14px;
+}
+
+.quick-card h3 {
+    font-size: 15px;
+}
+
+.quick-card p {
+    font-size: 11px;
+}
+
+.home-doctor-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 36px;
+}
+
+.home-doctor-box h3 {
+    font-size: 19px;
+}
+
+.facility-card h3 {
+    font-size: 17px;
+}
+
+.home-cta h2 {
+    font-size: 28px;
+}
+}
+
+/* ============================================================
+   PROFIL RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+/* ============================================================
+   HALAMAN PROFIL
+   ============================================================ */
+
+.profil-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+.profil-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   FOTO PROFIL
+   ============================================================ */
+
+.foto-profil {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.foto-profil img {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(3, 79, 89, 0.18);
+}
+
+/* ============================================================
+   HEADER PROFIL
+   ============================================================ */
+
+.profil-header {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(3, 79, 89, 0.08);
+}
+
+.profil-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.profil-header h1 {
+    margin: 0 0 20px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.profil-header p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: #5f747a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.profil-alamat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 700px;
+    margin: 25px auto 0;
+    padding: 15px 20px;
+    background: #f1fafb;
+    border-radius: 14px;
+}
+
+.profil-alamat span {
+    font-size: 20px;
+}
+
+.profil-alamat p {
+    margin: 0;
+    color: #087f8c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   KARTU PROFIL
+   ============================================================ */
+
+.profil-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 35px 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(3, 79, 89, 0.07);
+}
+
+.profil-box-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f8fa;
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.profil-box h2 {
+    margin: 0 0 15px;
+    color: #087f8c;
+    font-family: "Manrope", sans-serif;
+    font-size: 27px;
+}
+
+.profil-box p {
+    margin: 0 0 14px;
+    color: #5f747a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.profil-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   SEJARAH
+   ============================================================ */
+
+.sejarah-box {
+    border-left: 5px solid #087f8c;
+}
+
+/* ============================================================
+   VISI
+   ============================================================ */
+
+.visi-box {
+    border-left: 5px solid #18a9b8;
+}
+
+.visi-text {
+    color: #12343b !important;
+    font-family: "Manrope", sans-serif;
+    font-size: 21px !important;
+    font-weight: 700;
+    line-height: 1.6 !important;
+}
+
+/* ============================================================
+   MISI
+   ============================================================ */
+
+.misi-box {
+    border-left: 5px solid #087f8c;
+}
+
+.misi-box ol {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.misi-box li {
+    margin-bottom: 13px;
+    padding-left: 8px;
+    color: #5f747a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.misi-box li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   NILAI-NILAI
+   ============================================================ */
+
+.nilai-box {
+    border-left: 5px solid #18a9b8;
+}
+
+.nilai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.nilai-item {
+    padding: 20px;
+    background: #f4fafb;
+    border: 1px solid rgba(8, 127, 140, 0.08);
+    border-radius: 16px;
+}
+
+.nilai-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #087f8c;
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+}
+
+.nilai-item span {
+    display: block;
+    color: #6d8086;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   KOMITMEN
+   ============================================================ */
+
+.komitmen-box {
+    border-left: 5px solid #087f8c;
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   FOOTER PROFIL
+   ============================================================ */
+
+.profil-body footer {
+    margin-top: 0;
+}
+
+/* ============================================================
+   RESPONSIVE TABLET
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+    .profil-page {
+        padding: 50px 16px 60px;
+    }
+
+    .profil-header {
+        padding: 35px 25px;
+    }
+
+    .profil-header h1 {
+        font-size: 30px;
+    }
+
+    .profil-box {
+        padding: 30px;
+    }
+
+    .nilai-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================================================
+   RESPONSIVE HP
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .profil-page {
+        padding: 35px 12px 50px;
+    }
+
+    .foto-profil {
+        margin-bottom: 30px;
+    }
+
+    .foto-profil img {
+        max-height: 300px;
+        border-radius: 20px;
+    }
+
+    .profil-header {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .profil-header h1 {
+        font-size: 25px;
+    }
+
+    .profil-header p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .profil-alamat {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .profil-box {
+        display: block;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .profil-box-icon {
+        margin-bottom: 18px;
+    }
+
+    .profil-box h2 {
+        font-size: 23px;
+    }
+
+    .profil-box p,
+    .misi-box li {
+        font-size: 14px;
+    }
+
+    .visi-text {
+        font-size: 18px !important;
+    }
+
+    .nilai-grid {
+        gap: 12px;
+    }
+
+    .nilai-item {
+        padding: 17px;
+    }
+
+}
+
+/* ============================================================
+   RESPONSIVE HP KECIL
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .profil-header h1 {
+        font-size: 23px;
+    }
+
+    .profil-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .profil-box {
+        padding: 22px 17px;
+    }
+
+    .profil-box-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+}
+
+/* ============================================================
+   HALAMAN LAYANAN
+   RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+.layanan-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+/* ============================================================
+   HEADER LAYANAN
+   ============================================================ */
+
+.layanan-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.layanan-header .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.layanan-header h1 {
+    margin: 0 0 18px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.layanan-header p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #71848a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   GRID LAYANAN
+   ============================================================ */
+
+.layanan-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ============================================================
+   KARTU LAYANAN
+   ============================================================ */
+
+.layanan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 28px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(3, 79, 89, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.layanan-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(3, 79, 89, 0.13);
+    border-color: rgba(8, 127, 140, 0.25);
+}
+
+/* ============================================================
+   IKON
+   ============================================================ */
+
+.layanan-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background: #e9f8fa;
+    border-radius: 20px;
+    font-size: 34px;
+}
+
+/* ============================================================
+   JUDUL
+   ============================================================ */
+
+.layanan-card h2 {
+    margin: 0 0 13px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   DESKRIPSI
+   ============================================================ */
+
+.layanan-card p {
+    min-height: 82px;
+    margin: 0 0 25px;
+    color: #71848a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.layanan-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    min-height: 45px;
+    margin-top: auto;
+    padding: 11px 22px;
+    background: linear-gradient(
+        135deg,
+        #087f8c,
+        #18a9b8
+    );
+    color: #ffffff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(8, 127, 140, 0.18);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.layanan-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(8, 127, 140, 0.25);
+}
+
+/* ============================================================
+   INFORMASI PELAYANAN
+   ============================================================ */
+
+.layanan-info {
+    width: 100%;
+    max-width: 1100px;
+    margin: 55px auto 0;
+}
+
+.layanan-info-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 35px 40px;
+    background: linear-gradient(
+        135deg,
+        rgba(8, 127, 140, 0.96),
+        rgba(3, 79, 89, 0.96)
+    );
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(3, 79, 89, 0.18);
+}
+
+.layanan-info-icon {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.layanan-info h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 23px;
+}
+
+.layanan-info p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .layanan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .layanan-page {
+        padding: 45px 14px 60px;
+    }
+
+    .layanan-header {
+        margin-bottom: 35px;
+    }
+
+    .layanan-header h1 {
+        font-size: 29px;
+    }
+
+    .layanan-header p {
+        font-size: 14px;
+    }
+
+    .layanan-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .layanan-card {
+        padding: 30px 22px;
+    }
+
+    .layanan-card p {
+        min-height: auto;
+    }
+
+    .layanan-info-content {
+        display: block;
+        padding: 30px 25px;
+        text-align: center;
+    }
+
+    .layanan-info-icon {
+        margin: 0 auto 18px;
+    }
+
+    .layanan-info h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* ============================================================
+   HALAMAN DOKTER
+   RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+.dokter-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+/* ============================================================
+   HEADER DOKTER
+   ============================================================ */
+
+.dokter-header {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.dokter-header .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dokter-header h1 {
+    margin: 0 0 18px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.dokter-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #71848a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   SECTION DOKTER
+   ============================================================ */
+
+.dokter-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+}
+
+.dokter-section-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.dokter-section-title > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    background: #087f8c;
+    color: #ffffff;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.dokter-section-title h2 {
+    margin: 0 0 5px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 29px;
+}
+
+.dokter-section-title p {
+    margin: 0;
+    color: #71848a;
+    font-size: 14px;
+}
+
+/* ============================================================
+   GRID DOKTER SPESIALIS
+   ============================================================ */
+
+.dokter-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+/* ============================================================
+   GRID DOKTER UMUM
+   ============================================================ */
+
+.dokter-umum-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 380px));
+    justify-content: center;
+    gap: 25px;
+}
+
+/* ============================================================
+   KARTU DOKTER
+   ============================================================ */
+
+.dokter-modern-card {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(3, 79, 89, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.dokter-modern-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(3, 79, 89, 0.14);
+    border-color: rgba(8, 127, 140, 0.22);
+}
+
+/* ============================================================
+   FOTO DOKTER
+   ============================================================ */
+
+.dokter-photo {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #eaf7f8;
+}
+
+.dokter-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+}
+
+.dokter-modern-card:hover .dokter-photo img {
+    transform: scale(1.03);
+}
+
+/* ============================================================
+   INFORMASI DOKTER
+   ============================================================ */
+
+.dokter-info {
+    padding: 22px 20px 24px;
+    text-align: center;
+}
+
+.dokter-category {
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 5px 10px;
+    background: #e9f8fa;
+    color: #087f8c;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.dokter-info h3 {
+    margin: 0 0 7px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.dokter-info p {
+    margin: 0;
+    color: #71848a;
+    font-size: 13px;
+}
+
+/* ============================================================
+   PEMBATAS DOKTER UMUM
+   ============================================================ */
+
+.dokter-umum-section {
+    padding-top: 10px;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .dokter-modern-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .dokter-modern-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .dokter-page {
+        padding: 45px 14px 60px;
+    }
+
+    .dokter-header {
+        margin-bottom: 45px;
+    }
+
+    .dokter-header h1 {
+        font-size: 29px;
+    }
+
+    .dokter-header p {
+        font-size: 14px;
+    }
+
+    .dokter-section {
+        margin-bottom: 55px;
+    }
+
+    .dokter-section-title {
+        align-items: flex-start;
+        gap: 13px;
+        margin-bottom: 22px;
+    }
+
+    .dokter-section-title > span {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        border-radius: 12px;
+    }
+
+    .dokter-section-title h2 {
+        font-size: 24px;
+    }
+
+    .dokter-section-title p {
+        line-height: 1.6;
+    }
+
+    .dokter-modern-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .dokter-photo {
+        height: 360px;
+    }
+
+}
+
+/* ============================================================
+   HP KECIL
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .dokter-photo {
+        height: 320px;
+    }
+
+    .dokter-info {
+        padding: 20px 16px 22px;
+    }
+
+    .dokter-info h3 {
+        font-size: 16px;
+    }
+
+}
+
+/* ============================================================
+   DOKTER UMUM - COMPACT
+   Hanya mengubah bagian Dokter Umum
+   ============================================================ */
+
+.dokter-umum-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+/* KARTU DOKTER UMUM */
+
+.dokter-umum-modern-grid .dokter-modern-card {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* FOTO DOKTER UMUM */
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 240px;
+    overflow: hidden;
+}
+
+.dokter-umum-modern-grid .dokter-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFORMASI DOKTER UMUM */
+
+.dokter-umum-modern-grid .dokter-info {
+    padding: 18px 16px 20px;
+}
+
+.dokter-umum-modern-grid .dokter-category {
+    font-size: 11px;
+    padding: 5px 10px;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 10px 0 6px;
+}
+
+.dokter-umum-modern-grid .dokter-info p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 230px;
+    }
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 210px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info {
+        padding: 15px 12px 17px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info h3 {
+        font-size: 15px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 280px;
+    }
+
+}
+
+/* ============================================================
+   DOKTER UMUM
+   COMPACT • MODERN • PROFESSIONAL
+   Tidak mengubah Dokter Spesialis
+   ============================================================ */
+
+.dokter-umum-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* ============================================================
+   KARTU DOKTER UMUM
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-modern-card {
+    overflow: hidden;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 28px rgba(18, 52, 59, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(18, 52, 59, 0.13);
+}
+
+/* ============================================================
+   FOTO DOKTER UMUM
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-photo {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: #f1f8f9;
+}
+
+.dokter-umum-modern-grid .dokter-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card:hover .dokter-photo img {
+    transform: scale(1.04);
+}
+
+/* ============================================================
+   INFORMASI DOKTER
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-info {
+    padding: 17px 16px 19px;
+    text-align: center;
+}
+
+.dokter-umum-modern-grid .dokter-category {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.dokter-umum-modern-grid .dokter-info p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 220px;
+    }
+
+}
+
+/* ============================================================
+   TABLET KECIL / HP LANDSCAPE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 215px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info {
+        padding: 15px 12px 17px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info h3 {
+        font-size: 15px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info p {
+        font-size: 11px;
+    }
+
+}
+
+/* ============================================================
+   HP KECIL
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 190px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info {
+        padding: 13px 9px 15px;
+    }
+
+    .dokter-umum-modern-grid .dokter-category {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info h3 {
+        font-size: 13px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info p {
+        font-size: 10px;
+    }
+
+}
+
+/* ============================================================
+   HP SANGAT KECIL
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 260px;
+    }
+
+}
+
+/* ============================================================
+PERBAIKAN DOKTER UMUM
+Hanya mempengaruhi bagian Dokter Umum
+Dokter Spesialis tetap seperti sebelumnya
+============================================================ */
+
+.dokter-umum-modern-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 22px;
+max-width: 1120px;
+margin: 0 auto;
+}
+
+/* Kartu dokter umum dibuat lebih compact */
+.dokter-umum-modern-grid .dokter-modern-card {
+width: 100/* ============================================================
+   RS PRIMA SEHAT PEKALONGAN
+   MODERN HOSPITAL WEBSITE
+   Clean • Elegant • Modern • Medical • Trustworthy
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root{
+    --primary:#087f8c;
+    --primary-dark:#05616c;
+    --primary-deep:#034f59;
+    --cyan:#18a9b8;
+    --navy:#12343b;
+    --text:#304b52;
+    --muted:#71848a;
+    --white:#ffffff;
+    --bg:#f3fafb;
+    --surface:rgba(255,255,255,.94);
+    --surface-soft:rgba(255,255,255,.84);
+    --line:rgba(8,127,140,.12);
+    --shadow-sm:0 8px 25px rgba(18,52,59,.07);
+    --shadow-md:0 16px 40px rgba(18,52,59,.11);
+    --shadow-lg:0 25px 65px rgba(18,52,59,.15);
+    --radius:20px;
+    --radius-sm:13px;
+    --max:1220px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:95px;
+}
+
+body{
+    min-height:100vh;
+    font-family:"DM Sans","Segoe UI",Arial,sans-serif;
+    color:var(--text);
+    line-height:1.7;
+    background:
+        linear-gradient(rgba(240,249,250,.72),rgba(240,249,250,.78)),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    overflow-x:hidden;
+}
+
+body,
+.profil-body,
+.dokter-body,
+.dokter-umum-body,
+.dokter-anak-body,
+.dokter-kandungan-body,
+.dokter-bedah-body,
+.dokter-dalam-body,
+.dokter-laboratorium-body{
+    background-image:
+        linear-gradient(rgba(240,249,250,.72),rgba(240,249,250,.78)),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+h1,h2,h3,h4,h5{
+    font-family:"Manrope","Segoe UI",Arial,sans-serif;
+    color:var(--navy);
+    line-height:1.2;
+}
+h1,h2{font-weight:800}
+p{font-size:15px}
+img{max-width:100%}
+
+.container,
+.dokter-container,
+.layanan-container,
+.kontak-container,
+.media-container,
+.mediasosial-container{
+    width:min(92%,var(--max));
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    width:100%;
+    min-height:82px;
+    padding:10px max(4%,calc((100% - var(--max))/2));
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    background:rgba(255,255,255,.91);
+    border-bottom:1px solid rgba(255,255,255,.95);
+    box-shadow:0 5px 25px rgba(18,52,59,.08);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+}
+
+.logo img{
+    width:57px;
+    height:57px;
+    object-fit:contain;
+    filter:drop-shadow(0 5px 12px rgba(8,127,140,.14));
+    transition:transform .3s ease;
+}
+
+.logo:hover img{transform:scale(1.04)}
+
+.logo span{
+    font-family:"Manrope",sans-serif;
+    color:var(--navy);
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:-.4px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:3px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 14px;
+    border-radius:10px;
+    color:#294249;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:color .25s ease,background .25s ease;
+}
+
+nav a:hover{
+    color:var(--primary);
+    background:rgba(8,127,140,.065);
+}
+
+nav a.active{
+    color:var(--primary);
+    background:rgba(8,127,140,.07);
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:3px;
+    width:0;
+    height:3px;
+    border-radius:99px;
+    background:linear-gradient(90deg,var(--primary),var(--cyan));
+    transform:translateX(-50%);
+    transition:width .25s ease;
+}
+
+nav a:hover::after,
+nav a.active::after{width:48%}
+
+.hero{
+    position:relative;
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    padding:90px max(5%,calc((100% - var(--max))/2));
+    overflow:hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.94) 0%,
+            rgba(255,255,255,.82) 45%,
+            rgba(255,255,255,.45) 100%
+        ),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:560px;
+    height:560px;
+    right:-250px;
+    top:-220px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(23,169,184,.16),transparent 68%);
+    pointer-events:none;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    left:-260px;
+    bottom:-250px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(8,127,140,.10),transparent 70%);
+    pointer-events:none;
+}
+
+.hero > div{
+    position:relative;
+    z-index:2;
+    width:min(100%,820px);
+    animation:heroIn .8s ease both;
+}
+
+.hero h1{
+    max-width:850px;
+    margin-bottom:22px;
+    color:var(--primary);
+    font-size:clamp(42px,5.4vw,70px);
+    line-height:1.05;
+    letter-spacing:-2.6px;
+}
+
+.hero h1 span{color:var(--navy)}
+
+.hero p{
+    max-width:700px;
+    margin-bottom:32px;
+    color:#476169;
+    font-size:clamp(16px,1.4vw,19px);
+    line-height:1.8;
+}
+
+.button,
+.back-button,
+.btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:49px;
+    padding:13px 25px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--primary-dark),var(--cyan));
+    color:#fff;
+    text-decoration:none;
+    font:700 14px "DM Sans",sans-serif;
+    box-shadow:0 10px 26px rgba(8,127,140,.22);
+    overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.button::before,
+.back-button::before,
+.btn::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.25) 50%,transparent 80%);
+    transform:translateX(-120%);
+    transition:transform .55s ease;
+}
+
+.button:hover::before,
+.back-button:hover::before,
+.btn:hover::before{transform:translateX(120%)}
+
+.button:hover,
+.back-button:hover,
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 34px rgba(8,127,140,.28);
+}
+
+.section-header,
+.dokter-header,
+.profil-header,
+.dokter-anak-header,
+.dokter-kandungan-header,
+.dokter-bedah-header,
+.dokter-dalam-header,
+.dokter-laboratorium-header,
+.dokter-umum-header{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-header::before,
+.dokter-header::before,
+.profil-header::before{
+    content:"";
+    display:block;
+    width:44px;
+    height:4px;
+    margin:0 auto 14px;
+    border-radius:99px;
+    background:linear-gradient(90deg,var(--primary),var(--cyan));
+}
+
+.section-header h2,
+.dokter-header h2,
+.profil-header h2,
+.dokter-anak-header h2,
+.dokter-kandungan-header h2,
+.dokter-bedah-header h2,
+.dokter-dalam-header h2,
+.dokter-laboratorium-header h2,
+.dokter-umum-header h2{
+    color:var(--primary);
+    font-size:clamp(29px,3.5vw,42px);
+    letter-spacing:-1px;
+}
+
+.section-header p,
+.dokter-header p,
+.profil-header p,
+.dokter-anak-header p,
+.dokter-kandungan-header p,
+.dokter-bedah-header p,
+.dokter-dalam-header p,
+.dokter-laboratorium-header p,
+.dokter-umum-header p{
+    max-width:730px;
+    margin:10px auto 0;
+    color:var(--muted);
+}
+
+.container{
+    width:min(92%,var(--max));
+    margin:70px auto 90px;
+    padding:50px;
+    text-align:center;
+    background:rgba(255,255,255,.80);
+    border:1px solid rgba(255,255,255,.92);
+    border-radius:26px;
+    box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(9px);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:25px;
+}
+
+.card{
+    position:relative;
+    padding:30px 27px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    overflow:hidden;
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--cyan));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+
+.card:hover::before{transform:scaleX(1)}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+    font-size:20px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:15px;
+}
+
+.layanan-container{
+    margin-top:70px;
+    margin-bottom:90px;
+}
+
+.layanan-grid,
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:25px;
+}
+
+.layanan-card,
+.service-card{
+    position:relative;
+    padding:30px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.layanan-card:hover,
+.service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.layanan-card h3,
+.service-card h3{
+    color:var(--primary);
+    margin:14px 0 8px;
+}
+
+.layanan-card p,
+.service-card p{color:var(--muted)}
+
+.profil-page{
+    width:100%;
+    min-height:calc(100vh - 82px);
+    padding:72px 5% 95px;
+    background:
+        linear-gradient(rgba(240,249,250,.60),rgba(240,249,250,.67)),
+        url("bkg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.profil-header,
+.profil-box{
+    width:min(100%,1050px);
+    margin:0 auto 24px;
+    padding:32px;
+    background:rgba(255,255,255,.91);
+    border:1px solid rgba(255,255,255,.95);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    backdrop-filter:blur(10px);
+}
+
+.profil-header{
+    text-align:center;
+    border-top:4px solid var(--primary);
+}
+
+.profil-box{border-left:4px solid var(--primary)}
+
+.profil-header h2,
+.profil-box h2,
+.profil-box h3{color:var(--primary)}
+
+.profil-box h2{
+    margin-bottom:11px;
+    font-size:29px;
+}
+
+.profil-box h3{
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.profil-box p{color:#52686e}
+.profil-page .misi p{margin-bottom:3px}
+
+.dokter-container{
+    margin-top:70px;
+    margin-bottom:90px;
+}
+
+.dokter-spesialis{margin-bottom:68px}
+
+.dokter-spesialis > h2,
+.dokter-umum > h2{
+    margin-bottom:30px;
+    text-align:center;
+    color:var(--primary);
+    font-size:29px;
+}
+
+.dokter-spesialis > h2::after,
+.dokter-umum > h2::after{
+    content:"";
+    display:block;
+    width:55px;
+    height:3px;
+    margin:11px auto 0;
+    border-radius:99px;
+    background:var(--cyan);
+}
+
+.dokter-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:26px;
+}
+
+.dokter-card{
+    overflow:hidden;
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:22px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .35s ease,box-shadow .35s ease;
+}
+
+.dokter-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
+}
+
+.foto-dokter{
+    position:relative;
+    width:100%;
+    height:320px;
+    overflow:hidden;
+    background:#e7f5f7;
+}
+
+.foto-dokter img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.foto-dokter::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,transparent 60%,rgba(8,127,140,.12));
+    pointer-events:none;
+}
+
+.dokter-card:hover .foto-dokter img{transform:scale(1.035)}
+
+.info-dokter{
+    padding:22px 23px 24px;
+    text-align:center;
+}
+
+.info-dokter h3{
+    margin-bottom:5px;
+    color:var(--navy);
+    font-size:19px;
+}
+
+.info-dokter p{
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+}
+
+.nama-dokter{
+    width:100%;
+    margin-top:12px;
+    text-align:left!important;
+}
+
+.nama-dokter h3{
+    display:block!important;
+    margin:0!important;
+    padding:9px 0;
+    color:#52686e;
+    font-size:15px;
+    font-weight:500;
+    line-height:1.5;
+    border-bottom:1px solid #e6eef0;
+}
+
+.dokter-umum-container,
+.dokter-anak-container,
+.dokter-kandungan-container,
+.dokter-bedah-container,
+.dokter-dalam-container,
+.dokter-laboratorium-container{
+    width:min(92%,var(--max));
+    margin:70px auto 90px;
+}
+
+.dokter-umum-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:24px;
+}
+
+.dokter-umum-card{
+    overflow:hidden;
+    padding-bottom:20px;
+    text-align:center;
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:20px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.dokter-umum-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.dokter-umum-card img{
+    display:block;
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.dokter-umum-card h3{
+    margin:16px 15px 3px;
+    color:var(--navy);
+    font-size:16px;
+}
+
+.dokter-umum-card p{
+    margin:0 15px;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+}
+
+/* ============================================================
+   KARTU DOKTER POLI
+   Diperlebar agar foto + informasi berada dalam satu kolom
+   ============================================================ */
+
+.dokter-anak-grid,
+.dokter-kandungan-grid,
+.dokter-bedah-grid,
+.dokter-dalam-grid,
+.dokter-laboratorium-grid{
+    display:grid;
+    grid-template-columns: minmax(520px, 580px);
+    justify-content:center;
+    align-items:start;
+    gap:28px;
+}
+
+.dokter-anak-card,
+.dokter-kandungan-card,
+.dokter-bedah-card,
+.dokter-dalam-card,
+.dokter-laboratorium-card{
+    width:100%;
+    max-width:580px;
+    margin:0 auto;
+    overflow:hidden;
+
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:21px;
+    box-shadow:var(--shadow-sm);
+
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.dokter-anak-card:hover,
+.dokter-kandungan-card:hover,
+.dokter-bedah-card:hover,
+.dokter-dalam-card:hover,
+.dokter-laboratorium-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.dokter-anak-card img,
+.dokter-kandungan-card img,
+.dokter-bedah-card img,
+.dokter-dalam-card img,
+.dokter-laboratorium-card img{
+    display:block;
+    width:100%;
+    height:340px;
+    object-fit:cover;
+}
+
+/* ============================================================
+   NAMA & SPESIALIS DOKTER POLI
+   Posisi tepat di tengah kartu
+   ============================================================ */
+
+.dokter-anak-card h3,
+.dokter-kandungan-card h3,
+.dokter-bedah-card h3,
+.dokter-dalam-card h3,
+.dokter-laboratorium-card h3{
+    display:block;
+    width:100%;
+    margin:18px 0 5px;
+    padding:0 20px;
+
+    text-align:center;
+
+    color:var(--navy);
+    font-size:20px;
+    font-weight:800;
+    line-height:1.3;
+}
+
+.dokter-anak-card > p,
+.dokter-kandungan-card > p,
+.dokter-bedah-card > p,
+.dokter-dalam-card > p,
+.dokter-laboratorium-card > p{
+    display:block;
+    width:100%;
+    margin:0 0 20px;
+    padding:0 20px;
+
+    text-align:center;
+
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.kontak-container,
+.media-container,
+.mediasosial-container{
+    margin-top:70px;
+    margin-bottom:90px;
+}
+
+.kontak-grid,
+.contact-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:26px;
+}
+
+.kontak-box,
+.kontak-card,
+.contact-card{
+    padding:31px;
+    background:rgba(255,255,255,.93);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+}
+
+.kontak-box h3,
+.kontak-card h3,
+.contact-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.kontak-container .button,
+.kontak-container .back-button,
+.kontak-container .btn,
+.kontak-box .button,
+.kontak-box .back-button,
+.kontak-box .btn,
+.contact-card .button,
+.contact-card .back-button,
+.contact-card .btn{
+    display:flex;
+    width:max-content;
+    margin:20px auto 0;
+}
+
+.media-grid,
+.mediasosial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
+}
+
+.media-card,
+.mediasosial-card{
+    padding:31px 25px;
+    text-align:center;
+    background:rgba(255,255,255,.93);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.media-card:hover,
+.mediasosial-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow-md);
+}
+
+.media-card h3,
+.mediasosial-card h3{
+    margin:13px 0 5px;
+    color:var(--primary);
+}
+
+footer{
+    margin-top:0;
+    padding:60px max(5%,calc((100% - var(--max))/2)) 25px;
+    color:rgba(255,255,255,.80);
+    background:
+        radial-gradient(circle at 10% 0%,rgba(56,210,220,.14),transparent 30%),
+        linear-gradient(135deg,#064c57,#087f8c 55%,#0b9aaa);
+}
+
+.footer-container,
+.footer-content{
+    width:100%;
+    max-width:var(--max);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:42px;
+}
+
+footer h3,
+footer h4{
+    margin-bottom:13px;
+    color:#fff;
+}
+
+footer p,
+footer li,
+footer a{
+    color:rgba(255,255,255,.75);
+    font-size:14px;
+}
+
+footer a{
+    text-decoration:none;
+    transition:color .2s ease,padding .2s ease;
+}
+
+footer a:hover{
+    color:#fff;
+    padding-left:4px;
+}
+
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+
+.footer-bottom{
+    width:100%;
+    max-width:var(--max);
+    margin:38px auto 0;
+    padding-top:19px;
+    border-top:1px solid rgba(255,255,255,.16);
+    text-align:center;
+    color:rgba(255,255,255,.58);
+    font-size:13px;
+}
+
+@keyframes heroIn{
+    from{opacity:0;transform:translateY(22px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:1050px){
+
+    header{
+        padding-left:4%;
+        padding-right:4%;
+    }
+
+    .cards,
+    .layanan-grid,
+    .service-grid,
+    .dokter-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .dokter-anak-grid,
+    .dokter-kandungan-grid,
+    .dokter-bedah-grid,
+    .dokter-dalam-grid,
+    .dokter-laboratorium-grid{
+        grid-template-columns:repeat(auto-fit,minmax(280px,320px));
+        justify-content:center;
+    }
+
+    .dokter-umum-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .footer-container,
+    .footer-content{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+
+    header{
+        position:relative;
+        min-height:auto;
+        padding:12px 16px;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .logo span{font-size:16px}
+
+    .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        gap:1px;
+    }
+
+    nav a{
+        padding:7px 7px;
+        font-size:11.5px;
+    }
+
+    .hero{
+        min-height:570px;
+        padding:70px 7%;
+        text-align:center;
+        background:
+            linear-gradient(rgba(255,255,255,.89),rgba(255,255,255,.74)),
+            url("bkg.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    .hero > div{width:100%}
+
+    .hero h1{
+        font-size:40px;
+        letter-spacing:-1.2px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.72;
+    }
+
+    .container{
+        width:92%;
+        padding:38px 20px;
+    }
+
+    .cards,
+    .layanan-grid,
+    .service-grid,
+    .dokter-grid,
+    .dokter-umum-grid,
+    .dokter-anak-grid,
+    .dokter-kandungan-grid,
+    .dokter-bedah-grid,
+    .dokter-dalam-grid,
+    .dokter-laboratorium-grid,
+    .kontak-grid,
+    .contact-grid,
+    .media-grid,
+    .mediasosial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dokter-container,
+    .dokter-umum-container,
+    .dokter-anak-container,
+    .dokter-kandungan-container,
+    .dokter-bedah-container,
+    .dokter-dalam-container,
+    .dokter-laboratorium-container,
+    .kontak-container,
+    .media-container,
+    .mediasosial-container{
+        width:92%;
+        margin-top:55px;
+        margin-bottom:70px;
+    }
+
+    .foto-dokter{height:310px}
+
+    .dokter-umum-card img,
+    .dokter-anak-card img,
+    .dokter-kandungan-card img,
+    .dokter-bedah-card img,
+    .dokter-dalam-card img,
+    .dokter-laboratorium-card img{
+        height:300px;
+    }
+
+    .profil-page{
+        padding:52px 4% 70px;
+    }
+
+    .profil-header,
+    .profil-box{
+        padding:27px 21px;
+    }
+
+    footer{
+        padding:43px 22px 22px;
+    }
+
+    .footer-container,
+    .footer-content{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .kontak-container .button,
+    .kontak-container .back-button,
+    .kontak-container .btn,
+    .kontak-box .button,
+    .kontak-box .back-button,
+    .kontak-box .btn,
+    .contact-card .button,
+    .contact-card .back-button,
+    .contact-card .btn{
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media(max-width:420px){
+
+    .logo span{font-size:14.5px}
+
+    nav a{
+        font-size:10.5px;
+        padding:6px 5px;
+    }
+
+    .hero{min-height:520px}
+
+    .hero h1{font-size:34px}
+
+    .button,
+    .back-button,
+    .btn{
+        width:100%;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+    }
+}
+
+/* ============================================================
+   HILANGKAN FOOTER SEMUA HALAMAN DOKTER POLI
+   ============================================================ */
+
+body.dokter-umum-body footer,
+body.dokter-anak-body footer,
+body.dokter-kandungan-body footer,
+body.dokter-bedah-body footer,
+body.dokter-dalam-body footer,
+body.dokter-laboratorium-body footer{
+    display:none !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer{
+    width:100%;
+    text-align:center;
+}
+
+footer > p{
+    width:100%;
+    margin:0 auto !important;
+    text-align:center;
+}
+
+/* ============================================================
+   INFORMASI DOKTER - DI BAWAH FOTO
+   ============================================================ */
+
+.dokter-info{
+    width:90%;
+    margin:22px auto 0;
+    padding:18px 20px;
+    background:rgba(235,248,250,.90);
+    border-radius:14px;
+    text-align:left;
+}
+
+.info-row{
+    display:grid;
+    grid-template-columns:28px 125px 15px 1fr;
+    align-items:start;
+    gap:5px;
+    margin-bottom:13px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.info-row:last-child{
+    margin-bottom:0;
+}
+
+.info-icon{
+    font-size:17px;
+}
+
+.info-row strong{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.titik{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.info-row span:last-child{
+    color:#456675;
+}
+
+/* ============================================================
+   KHUSUS POLI LABORATORIUM
+   2 DOKTER BERJEJERAN
+   ============================================================ */
+
+body.dokter-laboratorium-body .dokter-laboratorium-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+    justify-content:center;
+    max-width:1180px;
+    margin:0 auto;
+}
+
+body.dokter-laboratorium-body .dokter-laboratorium-card{
+    width:100%;
+    max-width:580px;
+    margin:0 auto;
+}
+
+/* ============================================================
+   KERJA SAMA ASURANSI
+   ============================================================ */
+
+.asuransi-section{
+    width:min(92%,var(--max));
+    margin:70px auto 90px;
+}
+
+.asuransi-grid{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:24px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.asuransi-card{
+    min-height:175px;
+    padding:25px 18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.94);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.asuransi-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-md);
+}
+
+.asuransi-card img{
+    display:block;
+    width:100%;
+    max-width:220px;
+    height:140px;
+    object-fit:contain;
+    margin-bottom:12px;
+}
+
+.asuransi-card span{
+    color:var(--navy);
+    font-size:14px;
+    font-weight:700;
+    text-align:center;
+}
+
+/* ============================================================
+   HALAMAN MEDIA SOSIAL
+   Kartu disusun vertikal
+   ============================================================ */
+
+.media-page{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto;
+    text-align:center;
+}
+
+.media-page h2{
+    font-size:32px;
+    color:var(--primary);
+    margin-bottom:40px;
+}
+
+.media-page .cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+}
+
+.media-page .card{
+    width:100%;
+    max-width:600px;
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:20px 30px;
+    background:rgba(255,255,255,.95);
+    border:1px solid var(--line);
+    border-radius:18px;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.media-page .card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
+}
+
+.media-page .social-icon{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.media-page .instagram{
+    background:#fce4ec;
+    color:#d81b60;
+}
+
+.media-page .facebook{
+    background:#e3f2fd;
+    color:#1877f2;
+}
+
+.media-page .tiktok{
+    background:#eeeeee;
+    color:#111;
+}
+
+.media-page .email{
+    background:#e0f7fa;
+    color:var(--primary);
+}
+
+.media-page .card h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+}
+
+/* ============================================================
+   BUTTON LOKASI
+   ============================================================ */
+
+.button-lokasi{
+    display:block;
+    width:fit-content;
+    margin-top:12px;
+}
+
+/* ============================================================
+   HALAMAN KONTAK
+   Kartu disusun vertikal
+   ============================================================ */
+
+.kontak-page{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto 90px;
+    text-align:center;
+}
+
+.kontak-page h2{
+    font-size:32px;
+    color:var(--primary);
+    margin-bottom:40px;
+}
+
+.kontak-page .cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+.kontak-page .card{
+    width:100%;
+    max-width:700px;
+    min-height:122px;
+    padding:25px 30px;
+    background:rgba(255,255,255,.95);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.kontak-page .card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
+}
+
+.kontak-page .card h3{
+    font-size:20px;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.kontak-page .card a{
+    display:inline-block;
+    color:#1677a8;
+    font-size:18px;
+    font-weight:600;
+    text-decoration:none;
+    transition:color .2s ease;
+}
+
+.kontak-page .card a:hover{
+    color:var(--primary);
+    text-decoration:underline;
+}
+
+/* ============================================================
+   PROMO BERANDA
+   Ukuran asli promo: 1080 x 1350 (rasio 4:5)
+   ============================================================ */
+
+.promo-section{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+}
+
+.promo-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.promo-header h2{
+    font-size:30px;
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.promo-header p{
+    color:var(--muted);
+    font-size:16px;
+}
+
+.promo-slider{
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    padding:10px 5px 20px;
+    scroll-behavior:smooth;
+    scrollbar-width:thin;
+}
+
+.promo-slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.promo-slider::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+.promo-slider::-webkit-scrollbar-track{
+    background:#e8f2f4;
+    border-radius:20px;
+}
+
+.promo-card{
+    flex:0 0 300px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.promo-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-md);
+}
+
+.promo-card img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 5;
+    object-fit:contain;
+}
+
+/* ============================================================
+   RESPONSIVE - ASURANSI
+   ============================================================ */
+
+@media(max-width:1050px){
+    .asuransi-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - MEDIA SOSIAL & KONTAK
+   ============================================================ */
+
+@media(max-width:700px){
+    .media-page{
+        width:92%;
+        margin:40px auto;
+    }
+
+    .media-page h2,
+    .kontak-page h2{
+        font-size:25px;
+    }
+
+    .media-page .card{
+        max-width:100%;
+        padding:16px 20px;
+        gap:18px;
+    }
+
+    .media-page .social-icon{
+        width:52px;
+        height:52px;
+        font-size:25px;
+    }
+
+    .kontak-page{
+        width:92%;
+        margin:40px auto 70px;
+    }
+
+    .kontak-page .card{
+        max-width:100%;
+        padding:22px 20px;
+    }
+
+    .asuransi-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:14px;
+    }
+
+    .asuransi-card{
+        min-height:145px;
+        padding:18px 10px;
+    }
+
+    .asuransi-card img{
+        max-width:100%;
+        height:120px;
+        margin-bottom:8px;
+    }
+
+    .asuransi-card span{
+        font-size:12px;
+    }
+
+    .promo-section{
+        width:92%;
+        margin:40px auto;
+    }
+
+    .promo-header h2{
+        font-size:25px;
+    }
+
+    .promo-card{
+        flex:0 0 85%;
+    }
+
+    .promo-card img{
+        width:100%;
+        height:auto;
+        aspect-ratio:4 / 5;
+        object-fit:contain;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - HP KECIL
+   ============================================================ */
+
+@media(max-width:420px){
+    .media-page .card{
+        padding:15px 16px;
+        gap:14px;
+    }
+
+    .media-page .social-icon{
+        width:48px;
+        height:48px;
+        font-size:23px;
+    }
+
+    .media-page .card h3{
+        font-size:17px;
+    }
+
+    .kontak-page .card{
+        padding:20px 16px;
+    }
+
+    .kontak-page .card h3{
+        font-size:18px;
+    }
+
+    .kontak-page .card a{
+        font-size:16px;
+    }
+
+    .asuransi-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+
+    .asuransi-card{
+        min-height:130px;
+        padding:14px 8px;
+    }
+
+    .asuransi-card img{
+        height:100px;
+    }
+
+    .promo-card{
+        flex:0 0 90%;
+    }
+}
+
+/* ============================================================
+    FOTO PROFIL RUMAH SAKIT
+============================================================ */
+
+.foto-profil {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.foto-profil img {
+    width: 100%;
+    max-width: 850px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================================
+ HEADER PROFIL
+============================================================ */
+
+.profil-header {
+    text-align: center;
+}
+
+.profil-header h2 {
+    font-size: 32px;
+    color: #087f8c;
+    margin-bottom: 15px;
+}
+
+.profil-header p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+    BERANDA FINAL
+    RS PRIMA SEHAT PEKALONGAN
+    Tambahan untuk index.html versi terbaru
+    ============================================================ */
+
+/* ============================================================
+    HERO LABEL
+    ============================================================ */
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: rgba(8, 127, 140, 0.08);
+    border: 1px solid rgba(8, 127, 140, 0.12);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ============================================================
+ TOMBOL HERO
+ ============================================================ */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .button-lokasi {
+    margin-top: 0;
+}
+
+/* ============================================================
+ QUICK ACCESS
+ ============================================================ */
+
+.quick-section {
+    position: relative;
+    z-index: 5;
+    width: min(92%, 1100px);
+    margin: -45px auto 70px;
+}
+
+.quick-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.quick-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 105px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 18px;
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.quick-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(8, 127, 140, 0.22);
+}
+
+.quick-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 24px;
+}
+
+.quick-card h3 {
+    margin-bottom: 3px;
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.quick-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* ============================================================
+    LABEL SECTION
+    ============================================================ */
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+ LINK PADA CARD LAYANAN
+ ============================================================ */
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 27px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.card-link:hover {
+    color: var(--primary-dark);
+}
+
+/* ============================================================
+    DOKTER DI BERANDA
+    ============================================================ */
+
+.home-doctor-section {
+    width: min(92%, var(--max));
+    margin: 70px auto 90px;
+    padding: 65px 50px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(236, 249, 250, 0.88)
+        );
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(10px);
+}
+
+.home-doctor-content {
+    width: min(100%, 850px);
+    margin: 0 auto;
+}
+
+.home-doctor-box {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: var(--shadow-sm);
+}
+
+.home-doctor-icon {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 44px;
+}
+
+.home-doctor-box h3 {
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.home-doctor-box p {
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+/* ============================================================
+    FASILITAS
+    ============================================================ */
+
+.facility-section {
+    width: min(92%, var(--max));
+    margin: 70px auto 90px;
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.facility-card {
+    padding: 28px 22px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.facility-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(8, 127, 140, 0.08);
+    font-size: 29px;
+}
+
+.facility-card h3 {
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.facility-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.facility-button {
+    margin-top: 32px;
+    text-align: center;
+}
+
+/* ============================================================
+    ASURANSI - PENYESUAIAN BERANDA
+    ============================================================ */
+
+.asuransi-section {
+    padding-top: 10px;
+}
+
+.asuransi-section .section-header {
+    width: min(92%, 760px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asuransi-card {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+/* ============================================================
+    CALL TO ACTION
+    ============================================================ */
+
+.home-cta {
+    width: min(92%, var(--max));
+    margin: 20px auto 90px;
+    padding: 65px 40px;
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(3, 79, 89, 0.97),
+            rgba(8, 127, 140, 0.94)
+        );
+    border-radius: 28px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.home-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: auto;
+}
+
+.home-cta .section-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.home-cta h2 {
+    margin-bottom: 13px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.home-cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.home-cta .hero-buttons {
+    justify-content: center;
+}
+
+.home-cta .button {
+    background: #ffffff;
+    color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.home-cta .button:hover {
+    color: var(--primary-dark);
+}
+
+/* ============================================================
+    FOOTER BERANDA
+    ============================================================ */
+
+.footer-brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    max-width: 330px;
+}
+
+.footer-links, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-links h4, .footer-contact h4 {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    margin-bottom: 8px;
+}
+
+.footer-contact p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+    RESPONSIVE TABLET
+    ============================================================ */
+
+@media (max-width: 1050px) {
+
+.quick-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.facility-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.home-doctor-section {
+    padding: 50px 35px;
+}
+}
+
+/* ============================================================
+    RESPONSIVE MOBILE
+    ============================================================ */
+
+@media (max-width: 700px) {
+
+.hero-label {
+    font-size: 11px;
+    padding: 7px 12px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-buttons .button {
+    width: 100%;
+}
+
+.quick-section {
+    width: 92%;
+    margin: -25px auto 55px;
+}
+
+.quick-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.quick-card {
+    min-height: 85px;
+    padding: 16px;
+}
+
+.quick-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+}
+
+.home-doctor-section {
+    width: 92%;
+    margin: 55px auto 70px;
+    padding: 38px 20px;
+}
+
+.home-doctor-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 27px 20px;
+}
+
+.home-doctor-box p {
+    margin-bottom: 20px;
+}
+
+.facility-section {
+    width: 92%;
+    margin: 55px auto 70px;
+}
+
+.facility-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.facility-card {
+    padding: 25px 20px;
+}
+
+.home-cta {
+    width: 92%;
+    margin: 10px auto 70px;
+    padding: 45px 22px;
+    border-radius: 22px;
+}
+
+.home-cta .hero-buttons {
+    width: 100%;
+}
+
+.footer-brand, .footer-links, .footer-contact {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-links a:hover {
+    padding-left: 0;
+}
+}
+
+/* ============================================================
+ HP KECIL
+ ============================================================ */
+
+ @media (max-width: 420px) { .quick-card {
+    padding: 14px;
+}
+
+.quick-card h3 {
+    font-size: 15px;
+}
+
+.quick-card p {
+    font-size: 11px;
+}
+
+.home-doctor-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 36px;
+}
+
+.home-doctor-box h3 {
+    font-size: 19px;
+}
+
+.facility-card h3 {
+    font-size: 17px;
+}
+
+.home-cta h2 {
+    font-size: 28px;
+}
+}
+
+/* ============================================================
+   PROFIL RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+/* ============================================================
+   HALAMAN PROFIL
+   ============================================================ */
+
+.profil-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+.profil-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   FOTO PROFIL
+   ============================================================ */
+
+.foto-profil {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.foto-profil img {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(3, 79, 89, 0.18);
+}
+
+/* ============================================================
+   HEADER PROFIL
+   ============================================================ */
+
+.profil-header {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(3, 79, 89, 0.08);
+}
+
+.profil-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.profil-header h1 {
+    margin: 0 0 20px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.profil-header p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: #5f747a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.profil-alamat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 700px;
+    margin: 25px auto 0;
+    padding: 15px 20px;
+    background: #f1fafb;
+    border-radius: 14px;
+}
+
+.profil-alamat span {
+    font-size: 20px;
+}
+
+.profil-alamat p {
+    margin: 0;
+    color: #087f8c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   KARTU PROFIL
+   ============================================================ */
+
+.profil-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 35px 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(3, 79, 89, 0.07);
+}
+
+.profil-box-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f8fa;
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.profil-box h2 {
+    margin: 0 0 15px;
+    color: #087f8c;
+    font-family: "Manrope", sans-serif;
+    font-size: 27px;
+}
+
+.profil-box p {
+    margin: 0 0 14px;
+    color: #5f747a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.profil-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   SEJARAH
+   ============================================================ */
+
+.sejarah-box {
+    border-left: 5px solid #087f8c;
+}
+
+/* ============================================================
+   VISI
+   ============================================================ */
+
+.visi-box {
+    border-left: 5px solid #18a9b8;
+}
+
+.visi-text {
+    color: #12343b !important;
+    font-family: "Manrope", sans-serif;
+    font-size: 21px !important;
+    font-weight: 700;
+    line-height: 1.6 !important;
+}
+
+/* ============================================================
+   MISI
+   ============================================================ */
+
+.misi-box {
+    border-left: 5px solid #087f8c;
+}
+
+.misi-box ol {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.misi-box li {
+    margin-bottom: 13px;
+    padding-left: 8px;
+    color: #5f747a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.misi-box li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   NILAI-NILAI
+   ============================================================ */
+
+.nilai-box {
+    border-left: 5px solid #18a9b8;
+}
+
+.nilai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.nilai-item {
+    padding: 20px;
+    background: #f4fafb;
+    border: 1px solid rgba(8, 127, 140, 0.08);
+    border-radius: 16px;
+}
+
+.nilai-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #087f8c;
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+}
+
+.nilai-item span {
+    display: block;
+    color: #6d8086;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   KOMITMEN
+   ============================================================ */
+
+.komitmen-box {
+    border-left: 5px solid #087f8c;
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   FOOTER PROFIL
+   ============================================================ */
+
+.profil-body footer {
+    margin-top: 0;
+}
+
+/* ============================================================
+   RESPONSIVE TABLET
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+    .profil-page {
+        padding: 50px 16px 60px;
+    }
+
+    .profil-header {
+        padding: 35px 25px;
+    }
+
+    .profil-header h1 {
+        font-size: 30px;
+    }
+
+    .profil-box {
+        padding: 30px;
+    }
+
+    .nilai-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================================================
+   RESPONSIVE HP
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .profil-page {
+        padding: 35px 12px 50px;
+    }
+
+    .foto-profil {
+        margin-bottom: 30px;
+    }
+
+    .foto-profil img {
+        max-height: 300px;
+        border-radius: 20px;
+    }
+
+    .profil-header {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .profil-header h1 {
+        font-size: 25px;
+    }
+
+    .profil-header p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .profil-alamat {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .profil-box {
+        display: block;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .profil-box-icon {
+        margin-bottom: 18px;
+    }
+
+    .profil-box h2 {
+        font-size: 23px;
+    }
+
+    .profil-box p,
+    .misi-box li {
+        font-size: 14px;
+    }
+
+    .visi-text {
+        font-size: 18px !important;
+    }
+
+    .nilai-grid {
+        gap: 12px;
+    }
+
+    .nilai-item {
+        padding: 17px;
+    }
+
+}
+
+/* ============================================================
+   RESPONSIVE HP KECIL
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+    .profil-header h1 {
+        font-size: 23px;
+    }
+
+    .profil-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .profil-box {
+        padding: 22px 17px;
+    }
+
+    .profil-box-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+}
+
+/* ============================================================
+   HALAMAN LAYANAN
+   RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+.layanan-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+/* ============================================================
+   HEADER LAYANAN
+   ============================================================ */
+
+.layanan-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.layanan-header .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.layanan-header h1 {
+    margin: 0 0 18px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.layanan-header p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #71848a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   GRID LAYANAN
+   ============================================================ */
+
+.layanan-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ============================================================
+   KARTU LAYANAN
+   ============================================================ */
+
+.layanan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 28px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(8, 127, 140, 0.10);
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(3, 79, 89, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.layanan-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(3, 79, 89, 0.13);
+    border-color: rgba(8, 127, 140, 0.25);
+}
+
+/* ============================================================
+   IKON
+   ============================================================ */
+
+.layanan-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background: #e9f8fa;
+    border-radius: 20px;
+    font-size: 34px;
+}
+
+/* ============================================================
+   JUDUL
+   ============================================================ */
+
+.layanan-card h2 {
+    margin: 0 0 13px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   DESKRIPSI
+   ============================================================ */
+
+.layanan-card p {
+    min-height: 82px;
+    margin: 0 0 25px;
+    color: #71848a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
+.layanan-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    min-height: 45px;
+    margin-top: auto;
+    padding: 11px 22px;
+    background: linear-gradient(
+        135deg,
+        #087f8c,
+        #18a9b8
+    );
+    color: #ffffff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(8, 127, 140, 0.18);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.layanan-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(8, 127, 140, 0.25);
+}
+
+/* ============================================================
+   INFORMASI PELAYANAN
+   ============================================================ */
+
+.layanan-info {
+    width: 100%;
+    max-width: 1100px;
+    margin: 55px auto 0;
+}
+
+.layanan-info-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 35px 40px;
+    background: linear-gradient(
+        135deg,
+        rgba(8, 127, 140, 0.96),
+        rgba(3, 79, 89, 0.96)
+    );
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(3, 79, 89, 0.18);
+}
+
+.layanan-info-icon {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.layanan-info h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 23px;
+}
+
+.layanan-info p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .layanan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .layanan-page {
+        padding: 45px 14px 60px;
+    }
+
+    .layanan-header {
+        margin-bottom: 35px;
+    }
+
+    .layanan-header h1 {
+        font-size: 29px;
+    }
+
+    .layanan-header p {
+        font-size: 14px;
+    }
+
+    .layanan-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .layanan-card {
+        padding: 30px 22px;
+    }
+
+    .layanan-card p {
+        min-height: auto;
+    }
+
+    .layanan-info-content {
+        display: block;
+        padding: 30px 25px;
+        text-align: center;
+    }
+
+    .layanan-info-icon {
+        margin: 0 auto 18px;
+    }
+
+    .layanan-info h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* ============================================================
+   HALAMAN DOKTER
+   RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+.dokter-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+/* ============================================================
+   HEADER DOKTER
+   ============================================================ */
+
+.dokter-header {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.dokter-header .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dokter-header h1 {
+    margin: 0 0 18px;
+    color: #12343b;
+    font-family: "Manrope", sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.dokter-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #71848a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+   DOKTER UMUM - COMPACT
+   Hanya mengubah bagian Dokter Umum
+   ============================================================ */
+
+.dokter-umum-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+/* KARTU DOKTER UMUM */
+
+.dokter-umum-modern-grid .dokter-modern-card {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* FOTO DOKTER UMUM */
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 240px;
+    overflow: hidden;
+}
+
+.dokter-umum-modern-grid .dokter-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFORMASI DOKTER UMUM */
+
+.dokter-umum-modern-grid .dokter-info {
+    padding: 18px 16px 20px;
+}
+
+.dokter-umum-modern-grid .dokter-category {
+    font-size: 11px;
+    padding: 5px 10px;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 10px 0 6px;
+}
+
+.dokter-umum-modern-grid .dokter-info p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 230px;
+    }
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 210px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info {
+        padding: 15px 12px 17px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info h3 {
+        font-size: 15px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 280px;
+    }
+
+}
+
+/* ============================================================
+   DOKTER UMUM
+   COMPACT • MODERN • PROFESSIONAL
+   Tidak mengubah Dokter Spesialis
+   ============================================================ */
+
+.dokter-umum-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+/* ============================================================
+   KARTU DOKTER UMUM
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-modern-card {
+    overflow: hidden;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 28px rgba(18, 52, 59, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(18, 52, 59, 0.13);
+}
+
+/* ============================================================
+   FOTO DOKTER UMUM
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-photo {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: #f1f8f9;
+}
+
+.dokter-umum-modern-grid .dokter-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card:hover .dokter-photo img {
+    transform: scale(1.04);
+}
+
+/* ============================================================
+   INFORMASI DOKTER
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-info {
+    padding: 17px 16px 19px;
+    text-align: center;
+}
+
+.dokter-umum-modern-grid .dokter-category {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.dokter-umum-modern-grid .dokter-info p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 220px;
+    }
+
+}
+
+/* ============================================================
+   TABLET KECIL / HP LANDSCAPE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 215px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info {
+        padding: 15px 12px 17px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info h3 {
+        font-size: 15px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info p {
+        font-size: 11px;
+    }
+
+}
+
+/* ============================================================
+   HP KECIL
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 190px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info {
+        padding: 13px 9px 15px;
+    }
+
+    .dokter-umum-modern-grid .dokter-category {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info h3 {
+        font-size: 13px;
+    }
+
+    .dokter-umum-modern-grid .dokter-info p {
+        font-size: 10px;
+    }
+
+}
+
+/* ============================================================
+   HP SANGAT KECIL
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+    .dokter-umum-modern-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dokter-umum-modern-grid .dokter-photo {
+        height: 260px;
+    }
+
+}
+
+/* ============================================================
+PERBAIKAN DOKTER UMUM
+Hanya mempengaruhi bagian Dokter Umum
+Dokter Spesialis tetap seperti sebelumnya
+============================================================ */
+
+.dokter-umum-modern-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 22px;
+max-width: 1120px;
+margin: 0 auto;
+}
+
+/* Kartu dokter umum dibuat lebih compact */
+.dokter-umum-modern-grid .dokter-modern-card {
+width: 100%;
+border-radius: 18px;
+overflow: hidden;
+}
+
+/* Foto dokter umum lebih pendek */
+.dokter-umum-modern-grid .dokter-photo {
+height: 250px;
+overflow: hidden;
+}
+
+.dokter-umum-modern-grid .dokter-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Area informasi dibuat lebih ringkas */
+.dokter-umum-modern-grid .dokter-info {
+padding: 18px 16px 20px;
+}
+
+/* Label */
+.dokter-umum-modern-grid .dokter-category {
+font-size: 12px;
+margin-bottom: 7px;
+}
+
+/* Nama dokter */
+.dokter-umum-modern-grid .dokter-info h3 {
+font-size: 17px;
+line-height: 1.35;
+margin: 0 0 7px;
+}
+
+/* Jabatan */
+.dokter-umum-modern-grid .dokter-info p {
+font-size: 13px;
+line-height: 1.5;
+margin: 0;
+}
+
+/* ============================================================
+TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+.dokter-umum-modern-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+}
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 240px;
+}
+
+}
+
+/* ============================================================
+MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+.dokter-umum-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 220px;
+}
+
+.dokter-umum-modern-grid .dokter-info {
+    padding: 15px 13px 17px;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    font-size: 15px;
+}
+
+.dokter-umum-modern-grid .dokter-info p {
+    font-size: 12px;
+}
+
+}
+
+/* ============================================================
+HP KECIL
+============================================================ */
+
+@media (max-width: 480px) {
+
+.dokter-umum-modern-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 18px;
+}
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 300px;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    font-size: 17px;
+}
+
+}
+border-radius: 18px;
+overflow: hidden;
+}
+
+/* Foto dokter umum lebih pendek */
+.dokter-umum-modern-grid .dokter-photo {
+height: 250px;
+overflow: hidden;
+}
+
+.dokter-umum-modern-grid .dokter-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Area informasi dibuat lebih ringkas */
+.dokter-umum-modern-grid .dokter-info {
+padding: 18px 16px 20px;
+}
+
+/* Label */
+.dokter-umum-modern-grid .dokter-category {
+font-size: 12px;
+margin-bottom: 7px;
+}
+
+/* Nama dokter */
+.dokter-umum-modern-grid .dokter-info h3 {
+font-size: 17px;
+line-height: 1.35;
+margin: 0 0 7px;
+}
+
+/* Jabatan */
+.dokter-umum-modern-grid .dokter-info p {
+font-size: 13px;
+line-height: 1.5;
+margin: 0;
+}
+
+/* ============================================================
+TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+.dokter-umum-modern-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+}
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 240px;
+}
+
+}
+
+/* ============================================================
+MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+.dokter-umum-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 220px;
+}
+
+.dokter-umum-modern-grid .dokter-info {
+    padding: 15px 13px 17px;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    font-size: 15px;
+}
+
+.dokter-umum-modern-grid .dokter-info p {
+    font-size: 12px;
+}
+
+}
+
+/* ============================================================
+HP KECIL
+============================================================ */
+
+@media (max-width: 480px) {
+
+.dokter-umum-modern-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 18px;
+}
+
+.dokter-umum-modern-grid .dokter-photo {
+    height: 300px;
+}
+
+.dokter-umum-modern-grid .dokter-info h3 {
+    font-size: 17px;
+}
+
+}
+
+/* ============================================================
+   POLI KANDUNGAN
+   2 DOKTER SEJAJAR
+   TAMPILAN KARTU TETAP
+   ============================================================ */
+
+.dokter-kandungan-body .dokter-kandungan-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.dokter-kandungan-body .dokter-kandungan-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+/* ============================================================
+   POLI LABORATORIUM
+   KETERANGAN SAMA DENGAN DOKTER SPESIALIS LAIN
+   ============================================================ */
+
+.dokter-laboratorium-body .dokter-info {
+    width: 90%;
+    margin: 22px auto 0;
+    padding: 18px 20px;
+    background: rgba(235,248,250,.90);
+    border-radius: 14px;
+    text-align: left;
+}
+
+.dokter-laboratorium-body .info-row {
+    display: grid;
+    grid-template-columns: 28px 125px 15px 1fr;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.dokter-laboratorium-body .info-row:last-child {
+    margin-bottom: 0;
+}
+
+.dokter-laboratorium-body .info-row strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.dokter-laboratorium-body .titik {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ============================================================
+   POLI LABORATORIUM
+   KETERANGAN DIBUAT SAMA DENGAN DOKTER SPESIALIS
+   ============================================================ */
+
+.dokter-laboratorium-info {
+    width: 90%;
+    margin: 22px auto 0;
+    padding: 18px 20px;
+    background: rgba(235, 248, 250, 0.90);
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.dokter-laboratorium-info .info-row {
+    display: grid;
+    grid-template-columns: 28px 125px 15px 1fr;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.dokter-laboratorium-info .info-row:last-child {
+    margin-bottom: 0;
+}
+
+.dokter-laboratorium-info .info-icon {
+    width: 28px;
+}
+
+.dokter-laboratorium-info .info-row strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.dokter-laboratorium-info .titik {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ============================================================
+   PERBAIKAN DOKTER LABORATORIUM
+   ============================================================ */
+
+/* HILANGKAN LABEL "DOKTER SPESIALIS" DI BAWAH FOTO */
+body.dokter-laboratorium-body .dokter-category {
+    display: none !important;
+}
+
+/* NAMA DOKTER */
+body.dokter-laboratorium-body .dokter-laboratorium-content h3 {
+    text-align: center !important;
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+}
+
+/* PROFESI DI BAWAH NAMA */
+body.dokter-laboratorium-body .dokter-laboratorium-content .dokter-profesi {
+    display: block !important;
+    text-align: center !important;
+    color: #087f8c !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    margin: 0 0 22px !important;
+}
+
+/* ============================================================
+   POLI KANDUNGAN - FINAL
+   Tampilan dibuat sama seperti Poli Laboratorium
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   GRID DOKTER
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body .dokter-kandungan-grid {
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 28px !important;
+
+    width: 100% !important;
+
+    max-width: 1180px !important;
+
+    margin: 0 auto !important;
+
+    align-items: start !important;
+
+}
+
+/* ------------------------------------------------------------
+   CARD DOKTER
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body .dokter-kandungan-card {
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+}
+
+/* ------------------------------------------------------------
+   FOTO DOKTER
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-photo {
+
+    width: 100% !important;
+
+    text-align: center !important;
+
+    overflow: hidden !important;
+
+}
+
+body.dokter-kandungan-body
+.dokter-kandungan-photo img {
+
+    display: block !important;
+
+    width: 100% !important;
+
+    height: 340px !important;
+
+    object-fit: cover !important;
+
+    object-position: center !important;
+
+    border-radius: 18px !important;
+
+}
+
+/* ------------------------------------------------------------
+   CONTENT DOKTER
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-content {
+
+    width: 100% !important;
+
+}
+
+/* ------------------------------------------------------------
+   HILANGKAN LABEL "DOKTER SPESIALIS"
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-category {
+
+    display: none !important;
+
+}
+
+/* ------------------------------------------------------------
+   NAMA DOKTER
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-content h3 {
+
+    text-align: center !important;
+
+    margin-top: 18px !important;
+
+    margin-bottom: 8px !important;
+
+}
+
+/* ------------------------------------------------------------
+   PROFESI DOKTER
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-content .dokter-profesi {
+
+    display: block !important;
+
+    text-align: center !important;
+
+    color: #087f8c !important;
+
+    font-size: 15px !important;
+
+    font-weight: 500 !important;
+
+    margin: 0 0 22px !important;
+
+}
+
+/* ------------------------------------------------------------
+   KOTAK INFORMASI
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-info {
+
+    width: 90% !important;
+
+    margin: 22px auto 0 !important;
+
+    padding: 18px 20px !important;
+
+    background:
+        rgba(235, 248, 250, 0.90) !important;
+
+    border-radius: 14px !important;
+
+    box-sizing: border-box !important;
+
+}
+
+/* ------------------------------------------------------------
+   BARIS INFORMASI
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-info .info-row {
+
+    display: grid !important;
+
+    grid-template-columns:
+        28px 125px 15px 1fr !important;
+
+    align-items: start !important;
+
+    gap: 5px !important;
+
+    margin-bottom: 13px !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.5 !important;
+
+    text-align: left !important;
+
+}
+
+/* BARIS TERAKHIR */
+
+body.dokter-kandungan-body
+.dokter-kandungan-info .info-row:last-child {
+
+    margin-bottom: 0 !important;
+
+}
+
+/* ------------------------------------------------------------
+   ICON
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-info .info-icon {
+
+    width: 28px !important;
+
+}
+
+/* ------------------------------------------------------------
+   LABEL INFORMASI
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-info .info-row strong {
+
+    color: #087f8c !important;
+
+    font-weight: 600 !important;
+
+}
+
+/* ------------------------------------------------------------
+   TITIK :
+   ------------------------------------------------------------ */
+
+body.dokter-kandungan-body
+.dokter-kandungan-info .titik {
+
+    color: #087f8c !important;
+
+    font-weight: 600 !important;
+
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE TABLET / HP
+   ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-grid {
+
+        grid-template-columns: 1fr !important;
+
+        max-width: 580px !important;
+
+    }
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-photo img {
+
+        height: 340px !important;
+
+    }
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-info {
+
+        width: 94% !important;
+
+    }
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-info .info-row {
+
+        grid-template-columns:
+            28px 110px 15px 1fr !important;
+
+    }
+
+}
+
+/* ------------------------------------------------------------
+   HP KECIL
+   ------------------------------------------------------------ */
+
+@media (max-width: 480px) {
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-photo img {
+
+        height: 300px !important;
+
+    }
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-info {
+
+        width: 96% !important;
+
+        padding: 16px !important;
+
+    }
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-info .info-row {
+
+        grid-template-columns:
+            25px 95px 12px 1fr !important;
+
+        gap: 4px !important;
+
+        font-size: 13px !important;
+
+    }
+
+    body.dokter-kandungan-body
+    .dokter-kandungan-info .info-icon {
+
+        width: 25px !important;
+
+    }
+
+}
+
+/* ============================================================
+   POLI ANAK, BEDAH, PENYAKIT DALAM
+   KETERANGAN RATA KIRI
+   ============================================================ */
+
+/* KOTAK INFORMASI */
+
+body.dokter-anak-body .dokter-info,
+body.dokter-bedah-body .dokter-info,
+body.dokter-dalam-body .dokter-info,
+body.dokter-vaksin-body .dokter-info {
+
+    width: 90% !important;
+
+    margin: 22px auto 0 !important;
+
+    padding: 18px 20px !important;
+
+    background: rgba(235, 248, 250, 0.90) !important;
+
+    border-radius: 14px !important;
+
+    text-align: left !important;
+
+    box-sizing: border-box !important;
+}
+
+/* BARIS INFORMASI */
+
+body.dokter-anak-body .dokter-info .info-row,
+body.dokter-bedah-body .dokter-info .info-row,
+body.dokter-dalam-body .dokter-info .info-row,
+body.dokter-vaksin-body .dokter-info .info-row {
+
+    display: grid !important;
+
+    grid-template-columns: 28px 125px 15px 1fr !important;
+
+    align-items: start !important;
+
+    gap: 5px !important;
+
+    margin-bottom: 13px !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.5 !important;
+
+    text-align: left !important;
+
+}
+
+/* ICON */
+
+body.dokter-anak-body .dokter-info .info-icon,
+body.dokter-bedah-body .dokter-info .info-icon,
+body.dokter-dalam-body .dokter-info .info-icon,
+body.dokter-vaksin-body .dokter-info .info-icon {
+
+    width: 28px !important;
+
+    text-align: left !important;
+}
+
+/* LABEL */
+
+body.dokter-anak-body .dokter-info .info-row strong,
+body.dokter-bedah-body .dokter-info .info-row strong,
+body.dokter-dalam-body .dokter-info .info-row strong,
+body.dokter-vaksin-body .dokter-info .info-row strong {
+
+    color: #087f8c !important;
+
+    font-weight: 600 !important;
+
+    text-align: left !important;
+}
+
+/* TITIK DUA */
+
+body.dokter-anak-body .dokter-info .titik,
+body.dokter-bedah-body .dokter-info .titik,
+body.dokter-dalam-body .dokter-info .titik,
+body.dokter-vaksin-body .dokter-info .titik {
+
+    color: #087f8c !important;
+
+    font-weight: 600 !important;
+
+    text-align: left !important;
+}
+
+/* ISI KETERANGAN */
+
+body.dokter-anak-body .dokter-info .info-row > span:last-child,
+body.dokter-bedah-body .dokter-info .info-row > span:last-child,
+body.dokter-dalam-body .dokter-info .info-row > span:last-child,
+body.dokter-vaksin-body .dokter-info .info-row > span:last-child {
+
+    text-align: left !important;
+
+    color: #456675 !important;
+
+}
+
+/* BARIS TERAKHIR */
+
+body.dokter-anak-body .dokter-info .info-row:last-child,
+body.dokter-bedah-body .dokter-info .info-row:last-child,
+body.dokter-dalam-body .dokter-info .info-row:last-child,
+body.dokter-vaksin-body .dokter-info .info-row:last-child {
+
+    margin-bottom: 0 !important;
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    body.dokter-anak-body .dokter-info .info-row,
+    body.dokter-bedah-body .dokter-info .info-row,
+    body.dokter-dalam-body .dokter-info .info-row,
+    body.dokter-vaksin-body .dokter-info .info-row {
+
+        grid-template-columns:
+            28px 110px 15px 1fr !important;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    body.dokter-anak-body .dokter-info .info-row,
+    body.dokter-bedah-body .dokter-info .info-row,
+    body.dokter-dalam-body .dokter-info .info-row,
+    body.dokter-vaksin-body .dokter-info .info-row    {
+
+        grid-template-columns:
+            25px 95px 12px 1fr !important;
+
+        gap: 4px !important;
+
+        font-size: 13px !important;
+
+    }
+
+}
+
+/* ============================================================
+   DOKTER UMUM - TEKS DI BAWAH FOTO RATA TENGAH
+   ============================================================ */
+
+.dokter-umum-modern-grid .dokter-modern-card .dokter-info {
+    text-align: center;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card .dokter-category {
+    display: block;
+    text-align: center;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dokter-umum-modern-grid .dokter-modern-card p {
+    text-align: center;
+}
+
+/* HILANGKAN PROFESI DI BAWAH NAMA DOKTER UMUM */
+.dokter-umum-modern-grid .dokter-modern-card .dokter-info p {
+    display: none;
+}
+
+/* =========================================================
+   JADWAL DOKTER
+   ========================================================= */
+
+.jadwal-body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(240, 249, 250, .78),
+            rgba(240, 249, 250, .86)
+        ),
+        url("bkg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ================= HALAMAN ================= */
+
+.jadwal-page {
+    width: 100%;
+    padding: 70px 20px 80px;
+}
+
+.jadwal-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.jadwal-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.jadwal-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding: 7px 15px;
+
+    border-radius: 50px;
+
+    background: rgba(8, 127, 140, .10);
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.jadwal-header h1 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.jadwal-header p {
+    max-width: 680px;
+
+    margin: 14px auto 0;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+/* ================= FILTER ================= */
+
+.jadwal-filter {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    padding: 24px;
+
+    background: rgba(255, 255, 255, .90);
+
+    border: 1px solid rgba(8, 127, 140, .10);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+
+    backdrop-filter: blur(10px);
+}
+
+.filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.filter-group label {
+    color: var(--navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.filter-group select {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 16px;
+
+    border: 1px solid rgba(8, 127, 140, .18);
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.filter-group select:hover {
+    border-color: rgba(8, 127, 140, .35);
+}
+
+.filter-group select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(8, 127, 140, .10);
+}
+
+/* ================= TABEL ================= */
+
+.jadwal-table-wrapper {
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, .94);
+
+    border: 1px solid rgba(8, 127, 140, .10);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-md);
+
+    backdrop-filter: blur(10px);
+}
+
+.jadwal-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+.jadwal-table thead {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-deep),
+            var(--primary)
+        );
+
+    color: #ffffff;
+}
+
+.jadwal-table th {
+    padding: 18px 20px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .2px;
+
+    white-space: nowrap;
+}
+
+.jadwal-table td {
+    padding: 18px 20px;
+
+    border-bottom:
+        1px solid rgba(8, 127, 140, .08);
+
+    color: var(--text);
+
+    vertical-align: middle;
+}
+
+.jadwal-table tbody tr {
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.jadwal-table tbody tr:hover {
+    background: rgba(8, 127, 140, .045);
+}
+
+.jadwal-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ================= DOKTER DALAM TABEL ================= */
+
+.dokter-jadwal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 250px;
+}
+
+.dokter-avatar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--cyan)
+        );
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 15px rgba(8, 127, 140, .18);
+}
+
+.dokter-jadwal strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.dokter-jadwal span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+/* ================= KOLOM POLI ================= */
+
+.jadwal-table td:nth-child(2) {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+/* ================= KOLOM JAM ================= */
+
+.jadwal-table td:nth-child(4) {
+    color: var(--navy);
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* ================= DATA KOSONG ================= */
+
+.jadwal-empty {
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 180px;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.jadwal-empty strong {
+    color: var(--navy);
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.jadwal-empty span {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+/* ================= CATATAN ================= */
+
+.jadwal-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding: 20px 22px;
+
+    background: rgba(8, 127, 140, .07);
+
+    border: 1px solid rgba(8, 127, 140, .12);
+
+    border-radius: var(--radius-sm);
+}
+
+.note-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+.jadwal-note strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--navy);
+
+    font-size: 14px;
+}
+
+.jadwal-note p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .jadwal-page {
+        padding-top: 55px;
+    }
+
+    .jadwal-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .jadwal-table {
+        min-width: 780px;
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE HP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .jadwal-page {
+        padding: 45px 15px 60px;
+    }
+
+    .jadwal-header {
+        margin-bottom: 25px;
+    }
+
+    .jadwal-header h1 {
+        font-size: 30px;
+    }
+
+    .jadwal-header p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .jadwal-filter {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 18px;
+    }
+
+    .jadwal-table-wrapper {
+        border-radius: 16px;
+    }
+
+    .jadwal-note {
+        padding: 17px;
+
+        gap: 12px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .jadwal-header h1 {
+        font-size: 27px;
+    }
+
+    .jadwal-header .section-label {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .filter-group select {
+        min-height: 48px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================================
+   JADWAL DOKTER
+   RS PRIMA SEHAT PEKALONGAN
+   ========================================================= */
+
+/* ================= BODY ================= */
+
+.jadwal-body {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(240, 249, 250, .78),
+            rgba(240, 249, 250, .86)
+        ),
+        url("bkg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+/* ================= HALAMAN ================= */
+
+.jadwal-page {
+
+    width: 100%;
+
+    padding:
+        65px 20px 80px;
+
+}
+
+.jadwal-container {
+
+    width:
+        min(1180px, 100%);
+
+    margin:
+        0 auto;
+
+}
+
+/* ================= HEADER JADWAL ================= */
+
+.jadwal-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.jadwal-label {
+
+    display: inline-block;
+
+    padding:
+        7px 16px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(8, 127, 140, .10);
+
+    color:
+        var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        1.2px;
+
+}
+
+.jadwal-header h1 {
+
+    margin: 0;
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope", sans-serif;
+
+    font-size:
+        clamp(32px, 4vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+}
+
+.jadwal-header p {
+
+    max-width: 650px;
+
+    margin:
+        12px auto 18px;
+
+    color:
+        var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+.jadwal-update {
+
+    display: inline-block;
+
+    padding:
+        9px 20px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-deep),
+            var(--primary)
+        );
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px
+        rgba(8, 127, 140, .18);
+
+}
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+.jadwal-filter-box {
+
+    margin-bottom: 30px;
+
+    padding: 24px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border:
+        1px solid
+        rgba(8,127,140,.10);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+.jadwal-filter-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+
+}
+
+.jadwal-filter-title strong {
+
+    color:
+        var(--navy);
+
+    font-size: 18px;
+
+}
+
+.jadwal-filter-title span {
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+}
+
+.jadwal-filter {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+.filter-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.filter-group label {
+
+    color:
+        var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+.filter-group select {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding:
+        0 15px;
+
+    border:
+        1px solid
+        rgba(8,127,140,.16);
+
+    border-radius:
+        12px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--text);
+
+    font-family:
+        "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+
+}
+
+.filter-group select:hover {
+
+    border-color:
+        var(--primary);
+
+}
+
+.filter-group select:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(8,127,140,.08);
+
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.jadwal-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+}
+
+/* =========================================================
+   KARTU JADWAL
+   ========================================================= */
+
+.jadwal-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 24px;
+
+    background:
+        rgba(255,255,255,.95);
+
+    border:
+        1px solid
+        rgba(8,127,140,.10);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.jadwal-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--cyan)
+        );
+
+}
+
+.jadwal-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow-md);
+
+}
+
+/* ================= JUDUL POLI ================= */
+
+.jadwal-card-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+.jadwal-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--cyan)
+        );
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+.jadwal-card-title h2 {
+
+    margin: 0;
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    line-height: 1.35;
+
+}
+
+/* =========================================================
+   DOKTER
+   ========================================================= */
+
+.jadwal-doctor {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+.jadwal-doctor-second {
+
+    margin-top: 24px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid
+        rgba(8,127,140,.10);
+
+}
+
+.doctor-avatar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex:
+        0 0 52px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8,127,140,.12),
+            rgba(24,169,184,.22)
+        );
+
+    border:
+        2px solid
+        rgba(8,127,140,.25);
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+.jadwal-doctor h3 {
+
+    margin: 0 0 4px;
+
+    color:
+        var(--primary);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1.45;
+
+}
+
+.jadwal-doctor span {
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+/* =========================================================
+   JAM PRAKTIK
+   ========================================================= */
+
+.jadwal-time {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-left: 66px;
+
+}
+
+.jadwal-time div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        10px 13px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(8,127,140,.055);
+
+}
+
+.jadwal-time strong {
+
+    color:
+        var(--navy);
+
+    font-size: 12px;
+
+}
+
+.jadwal-time span {
+
+    color:
+        var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-align: right;
+
+}
+
+/* =========================================================
+   KLINIK UMUM
+   ========================================================= */
+
+.jadwal-card-wide {
+
+    grid-column:
+        1 / -1;
+
+}
+
+.dokter-umum-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 9px 25px;
+
+    margin-bottom: 20px;
+
+}
+
+.dokter-umum-list div {
+
+    padding:
+        8px 12px;
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(8,127,140,.055);
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+.jadwal-umum-time {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding:
+        12px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(8,127,140,.08);
+
+}
+
+.jadwal-umum-time strong {
+
+    color:
+        var(--navy);
+
+    font-size: 13px;
+
+}
+
+.jadwal-umum-time span {
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+/* =========================================================
+   DATA KOSONG
+   ========================================================= */
+
+.jadwal-empty {
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 180px;
+
+    margin-top: 20px;
+
+    padding: 30px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    text-align: center;
+
+}
+
+.jadwal-empty strong {
+
+    margin-bottom: 6px;
+
+    color:
+        var(--navy);
+
+    font-size: 17px;
+
+}
+
+.jadwal-empty span {
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+}
+
+/* =========================================================
+   INFORMASI TAMBAHAN
+   ========================================================= */
+
+.jadwal-information {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 2fr;
+
+    gap: 22px;
+
+    margin-top: 25px;
+
+}
+
+.info-service {
+
+    padding: 23px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border:
+        1px solid
+        rgba(8,127,140,.10);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow-sm);
+
+}
+
+.info-service h3 {
+
+    margin:
+        0 0 8px;
+
+    color:
+        var(--navy);
+
+    font-family:
+        "Manrope", sans-serif;
+
+    font-size: 17px;
+
+}
+
+.info-service p {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+.info-service > span {
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+}
+
+.service-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+}
+
+.service-list span {
+
+    padding:
+        9px 12px;
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(8,127,140,.07);
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+/* =========================================================
+   CATATAN
+   ========================================================= */
+
+.jadwal-note {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-top: 25px;
+
+    padding:
+        18px 20px;
+
+    background:
+        rgba(8,127,140,.07);
+
+    border:
+        1px solid
+        rgba(8,127,140,.12);
+
+    border-radius:
+        var(--radius-sm);
+
+}
+
+.note-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+.jadwal-note strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--navy);
+
+    font-size: 14px;
+
+}
+
+.jadwal-note p {
+
+    margin: 0;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .jadwal-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .jadwal-card-wide {
+
+        grid-column: auto;
+
+    }
+
+    .dokter-umum-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .jadwal-information {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE HP
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .jadwal-page {
+
+        padding:
+            45px 15px 60px;
+
+    }
+
+    .jadwal-header h1 {
+
+        font-size: 30px;
+
+    }
+
+    .jadwal-header p {
+
+        font-size: 14px;
+
+    }
+
+    .jadwal-filter-box {
+
+        padding: 18px;
+
+    }
+
+    .jadwal-filter-title {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+    }
+
+    .jadwal-filter {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .jadwal-card {
+
+        padding: 20px;
+
+    }
+
+    .jadwal-card-title h2 {
+
+        font-size: 16px;
+
+    }
+
+    .jadwal-time {
+
+        margin-left: 0;
+
+    }
+
+    .jadwal-time div {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+
+    }
+
+    .jadwal-time span {
+
+        text-align: left;
+
+    }
+
+    .dokter-umum-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .jadwal-umum-time {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+    }
+
+    .service-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .jadwal-note {
+
+        padding: 16px;
+
+    }
+
+}
+
+/* ============================================================
+   JADWAL DOKTER
+   RS PRIMA SEHAT PEKALONGAN
+   ============================================================ */
+
+/* ============================================================
+   BODY JADWAL
+   ============================================================ */
+
+.jadwal-body{
+
+    min-height:100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(240,249,250,.72),
+            rgba(240,249,250,.78)
+        ),
+        url("bkg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+}
+
+/* ============================================================
+   HALAMAN JADWAL
+   ============================================================ */
+
+.jadwal-page{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:70px 20px 80px;
+
+}
+
+/* ============================================================
+   HEADER JADWAL
+   ============================================================ */
+
+.jadwal-header{
+
+    max-width:850px;
+
+    margin:0 auto 35px;
+
+    text-align:center;
+
+}
+
+.jadwal-label{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    background:rgba(8,127,140,.08);
+
+    border:1px solid rgba(8,127,140,.12);
+
+    color:#087f8c;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1.8px;
+
+}
+
+.jadwal-header h1{
+
+    margin:0 0 12px;
+
+    color:#12343b;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+}
+
+.jadwal-header p{
+
+    margin:0;
+
+    color:#71848a;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+/* ============================================================
+   TOMBOL HARI
+   ============================================================ */
+
+.jadwal-hari{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    max-width:900px;
+
+    margin:0 auto 38px;
+
+}
+
+.hari-button{
+
+    min-width:105px;
+
+    padding:11px 20px;
+
+    border:1px solid rgba(8,127,140,.16);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.88);
+
+    color:#087f8c;
+
+    font-family:"DM Sans",sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:0 6px 18px rgba(18,52,59,.06);
+
+    transition:
+        transform .25s ease,
+        color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.hari-button:hover{
+
+    transform:translateY(-2px);
+
+    background:#ffffff;
+
+    box-shadow:0 10px 25px rgba(18,52,59,.10);
+
+}
+
+.hari-button.active{
+
+    color:#ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #05616c,
+            #087f8c
+        );
+
+    border-color:#087f8c;
+
+    box-shadow:
+        0 10px 25px
+        rgba(8,127,140,.22);
+
+}
+
+/* ============================================================
+   KONTEN HARI
+   ============================================================ */
+
+.jadwal-hari-content{
+
+    display:none;
+
+    animation:
+        jadwalFade .35s ease;
+
+}
+
+.jadwal-hari-content.active{
+
+    display:block;
+
+}
+
+@keyframes jadwalFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ============================================================
+   JUDUL HARI
+   ============================================================ */
+
+.jadwal-hari-title{
+
+    margin:0 auto 25px;
+
+    text-align:center;
+
+}
+
+.jadwal-hari-title span{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    color:#71848a;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.jadwal-hari-title h2{
+
+    display:inline-block;
+
+    margin:0;
+
+    padding:10px 55px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #05616c,
+            #087f8c
+        );
+
+    color:#ffffff;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    box-shadow:
+        0 10px 25px
+        rgba(8,127,140,.18);
+
+}
+
+/* ============================================================
+   LIST JADWAL
+   ============================================================ */
+
+.jadwal-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+/* ============================================================
+   KARTU JADWAL
+   ============================================================ */
+
+.jadwal-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    min-height:108px;
+
+    padding:17px 20px 17px 26px;
+
+    background:
+        rgba(255,255,255,.92);
+
+    border:1px solid
+        rgba(8,127,140,.14);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,52,59,.07);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+}
+
+.jadwal-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:
+        rgba(8,127,140,.28);
+
+    box-shadow:
+        0 16px 38px
+        rgba(18,52,59,.11);
+
+}
+
+/* ============================================================
+   AVATAR
+   ============================================================ */
+
+.jadwal-avatar{
+
+    width:78px;
+
+    height:78px;
+
+    flex:0 0 78px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-right:20px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8f8fa,
+            #ffffff
+        );
+
+    border:3px solid #18a9b8;
+
+    color:#087f8c;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    box-shadow:
+        0 7px 20px
+        rgba(8,127,140,.12);
+
+}
+
+.jadwal-detail{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.jadwal-top{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        220px;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.jadwal-top h3{
+
+    margin:0;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087f8c,
+            #12a7b2
+        );
+
+    color:#ffffff;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+}
+
+.jadwal-waktu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:44px;
+
+    padding:8px 15px;
+
+    border-radius:999px;
+
+    background:#087f8c;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+}
+
+.jadwal-detail > p{
+
+    margin:8px 10px 0;
+
+    color:#087f8c;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+}
+
+/* ============================================================
+   KLINIK UMUM
+   ============================================================ */
+
+.jadwal-umum{
+
+    margin-top:5px;
+
+    padding:0 18px 24px;
+
+    background:
+        rgba(255,255,255,.78);
+
+    border:1px solid
+        rgba(8,127,140,.22);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(18,52,59,.08);
+
+    overflow:hidden;
+
+}
+
+.jadwal-umum-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin:0 -18px 22px;
+
+    padding:0 20px 0 0;
+
+}
+
+.jadwal-umum-header > div{
+
+    display:flex;
+
+    align-items:center;
+
+    flex:1;
+
+}
+
+.jadwal-umum-icon{
+
+    width:70px;
+
+    height:70px;
+
+    flex:0 0 70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-right:16px;
+
+    border:4px solid #087f8c;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:#087f8c;
+
+    font-size:32px;
+
+    font-weight:800;
+
+}
+
+.jadwal-umum-header h3{
+
+    flex:1;
+
+    margin:0;
+
+    padding:11px 20px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087f8c,
+            #12a7b2
+        );
+
+    color:#ffffff;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:18px;
+
+    font-weight:800;
+
+}
+
+.jadwal-umum-header > span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#087f8c;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+}
+
+/* ============================================================
+   GRID DOKTER UMUM
+   ============================================================ */
+
+.jadwal-umum-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:14px 35px;
+
+    max-width:920px;
+
+    margin:0 auto;
+
+}
+
+.jadwal-umum-grid > div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    min-width:0;
+
+}
+
+.jadwal-umum-grid img{
+
+    width:58px;
+
+    height:58px;
+
+    flex:0 0 58px;
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:50%;
+
+    border:2px solid #18a9b8;
+
+    background:#eaf8fa;
+
+}
+
+.jadwal-umum-grid span{
+
+    color:#087f8c;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+}
+
+/* ============================================================
+   FOOTER KHUSUS JADWAL
+   Mengikuti footer website yang sudah ada
+   ============================================================ */
+
+.jadwal-body footer{
+
+    margin-top:0;
+
+}
+
+.jadwal-body .footer-brand img{
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+    margin-bottom:10px;
+
+}
+
+.jadwal-body .footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:5px;
+
+}
+
+.jadwal-body .footer-contact p{
+
+    margin-bottom:10px;
+
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media(max-width:900px){
+
+    .jadwal-page{
+
+        padding:55px 18px 70px;
+
+    }
+
+    .jadwal-top{
+
+        grid-template-columns:
+            1fr 190px;
+
+        gap:12px;
+
+    }
+
+    .jadwal-top h3{
+
+        font-size:15px;
+
+    }
+
+    .jadwal-waktu{
+
+        font-size:13px;
+
+    }
+
+    .jadwal-detail > p{
+
+        font-size:15px;
+
+    }
+
+    .jadwal-umum-grid{
+
+        gap:14px 20px;
+
+    }
+
+}
+
+/* ============================================================
+   HP
+   ============================================================ */
+
+@media(max-width:700px){
+
+    .jadwal-page{
+
+        width:92%;
+
+        padding:
+            45px 0 60px;
+
+    }
+
+    .jadwal-header{
+
+        margin-bottom:28px;
+
+    }
+
+    .jadwal-header h1{
+
+        font-size:32px;
+
+    }
+
+    .jadwal-header p{
+
+        font-size:14px;
+
+    }
+
+    .jadwal-hari{
+
+        gap:8px;
+
+        margin-bottom:30px;
+
+    }
+
+    .hari-button{
+
+        min-width:90px;
+
+        padding:9px 14px;
+
+        font-size:13px;
+
+    }
+
+    .jadwal-hari-title h2{
+
+        padding:9px 40px;
+
+        font-size:18px;
+
+    }
+
+    .jadwal-card{
+
+        align-items:flex-start;
+
+        padding:15px;
+
+        border-radius:17px;
+
+    }
+
+    .jadwal-avatar{
+
+        width:60px;
+
+        height:60px;
+
+        flex:0 0 60px;
+
+        margin-right:12px;
+
+        border-width:2px;
+
+        font-size:17px;
+
+    }
+
+    .jadwal-top{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:8px;
+
+    }
+
+    .jadwal-top h3{
+
+        padding:8px 13px;
+
+        font-size:14px;
+
+        text-align:left;
+
+    }
+
+    .jadwal-waktu{
+
+        min-height:38px;
+
+        padding:7px 10px;
+
+        font-size:13px;
+
+        justify-content:flex-start;
+
+        text-align:left;
+
+    }
+
+    .jadwal-detail > p{
+
+        margin:
+            7px 3px 0;
+
+        font-size:14px;
+
+    }
+
+    .jadwal-umum{
+
+        padding:
+            0 12px 18px;
+
+        border-radius:18px;
+
+    }
+
+    .jadwal-umum-header{
+
+        display:block;
+
+        margin:
+            0 -12px 18px;
+
+        padding-right:12px;
+
+    }
+
+    .jadwal-umum-header > div{
+
+        width:100%;
+
+    }
+
+    .jadwal-umum-icon{
+
+        width:58px;
+
+        height:58px;
+
+        flex:0 0 58px;
+
+        margin-right:10px;
+
+        font-size:25px;
+
+    }
+
+    .jadwal-umum-header h3{
+
+        padding:9px 13px;
+
+        font-size:15px;
+
+    }
+
+    .jadwal-umum-header > span{
+
+        display:block;
+
+        width:max-content;
+
+        margin:
+            8px 0 0 68px;
+
+        padding:7px 13px;
+
+        font-size:13px;
+
+    }
+
+    .jadwal-umum-grid{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+
+    }
+
+    .jadwal-umum-grid img{
+
+        width:52px;
+
+        height:52px;
+
+        flex:0 0 52px;
+
+    }
+
+    .jadwal-umum-grid span{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ============================================================
+   HP KECIL
+   ============================================================ */
+
+@media(max-width:420px){
+
+    .jadwal-header h1{
+
+        font-size:28px;
+
+    }
+
+    .jadwal-label{
+
+        font-size:10px;
+
+        letter-spacing:1.3px;
+
+    }
+
+    .hari-button{
+
+        min-width:
+            calc(33.333% - 6px);
+
+        padding:
+            8px 8px;
+
+        font-size:12px;
+
+    }
+
+    .jadwal-card{
+
+        padding:13px;
+
+    }
+
+    .jadwal-avatar{
+
+        width:52px;
+
+        height:52px;
+
+        flex:0 0 52px;
+
+        margin-right:9px;
+
+        font-size:15px;
+
+    }
+
+    .jadwal-top h3{
+
+        font-size:13px;
+
+    }
+
+    .jadwal-waktu{
+
+        font-size:12px;
+
+    }
+
+    .jadwal-detail > p{
+
+        font-size:13px;
+
+    }
+
+    .jadwal-umum-header h3{
+
+        font-size:14px;
+
+    }
+
+    .jadwal-umum-grid span{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* =========================================================
+   FOTO DOKTER SPESIALIS PADA JADWAL
+========================================================= */
+
+.jadwal-dokter-foto {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #eaf5f6;
+    border: 1px solid rgba(8, 127, 140, 0.12);
+}
+
+.jadwal-dokter-foto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}

@@ -10064,3 +10064,32 @@ body.dokter-vaksin-body .dokter-info .info-row:last-child {
     object-fit: cover;
     object-position: center top;
 }
+
+/* ================================
+   RESPONSIVE POLI LABORATORIUM
+   ================================ */
+
+@media (max-width: 768px) {
+
+    .dokter-laboratorium-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .dokter-laboratorium-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dokter-laboratorium-photo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dokter-laboratorium-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

@@ -10164,3 +10164,202 @@ body.dokter-vaksin-body .dokter-info .info-row:last-child {
         height: 300px !important;
     }
 }
+
+/* ============================================================
+   PERBAIKAN FINAL - FOTO SEMUA DOKTER TAMPIL UTUH
+   ------------------------------------------------------------
+   Hanya mengatur tampilan FOTO dokter.
+   Teks, kartu, footer, background, ukuran tulisan, dan layout
+   lainnya TIDAK diubah.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. HALAMAN DOKTER - DOKTER SPESIALIS
+   ------------------------------------------------------------ */
+
+.foto-dokter {
+    overflow: hidden;
+    background: #e7f5f7;
+}
+
+.foto-dokter img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+.dokter-card:hover .foto-dokter img {
+    transform: none !important;
+}
+
+/* ------------------------------------------------------------
+   2. HALAMAN DOKTER - DOKTER UMUM
+   ------------------------------------------------------------ */
+
+.dokter-umum-card img {
+    width: 100% !important;
+    height: 340px !important;
+    display: block;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #e7f5f7;
+}
+
+/* ------------------------------------------------------------
+   3. FOTO DOKTER POLI PELAYANAN
+   Anak, Kandungan, Bedah, Penyakit Dalam, Laboratorium
+   ------------------------------------------------------------ */
+
+.dokter-anak-card img,
+.dokter-kandungan-card img,
+.dokter-bedah-card img,
+.dokter-dalam-card img,
+.dokter-laboratorium-card img,
+.dokter-anak-photo img,
+.dokter-kandungan-photo img,
+.dokter-bedah-photo img,
+.dokter-dalam-photo img,
+.dokter-laboratorium-photo img {
+    width: 100% !important;
+    height: 340px !important;
+    display: block;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #e7f5f7;
+}
+
+/* ------------------------------------------------------------
+   4. JIKA MENGGUNAKAN MODEL KARTU DOKTER MODERN
+   ------------------------------------------------------------ */
+
+.dokter-photo img,
+.dokter-umum-modern-grid .dokter-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+.dokter-modern-card:hover .dokter-photo img,
+.dokter-umum-modern-grid .dokter-modern-card:hover .dokter-photo img {
+    transform: none !important;
+}
+
+/* ------------------------------------------------------------
+   5. RESPONSIVE - TABLET
+   Foto tetap utuh, hanya tinggi area foto yang dipertahankan.
+   ------------------------------------------------------------ */
+
+@media (min-width: 701px) and (max-width: 1050px) {
+
+    .foto-dokter {
+        height: 340px !important;
+    }
+
+    .foto-dokter img,
+    .dokter-umum-card img,
+    .dokter-anak-card img,
+    .dokter-kandungan-card img,
+    .dokter-bedah-card img,
+    .dokter-dalam-card img,
+    .dokter-laboratorium-card img,
+    .dokter-anak-photo img,
+    .dokter-kandungan-photo img,
+    .dokter-bedah-photo img,
+    .dokter-dalam-photo img,
+    .dokter-laboratorium-photo img {
+        height: 340px !important;
+    }
+}
+
+/* ------------------------------------------------------------
+   6. RESPONSIVE - HP
+   ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+
+    .foto-dokter {
+        height: 300px !important;
+    }
+
+    .foto-dokter img,
+    .dokter-umum-card img,
+    .dokter-anak-card img,
+    .dokter-kandungan-card img,
+    .dokter-bedah-card img,
+    .dokter-dalam-card img,
+    .dokter-laboratorium-card img,
+    .dokter-anak-photo img,
+    .dokter-kandungan-photo img,
+    .dokter-bedah-photo img,
+    .dokter-dalam-photo img,
+    .dokter-laboratorium-photo img {
+        height: 300px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+}
+
+/* ------------------------------------------------------------
+   7. HP SANGAT KECIL
+   ------------------------------------------------------------ */
+
+@media (max-width: 420px) {
+
+    .foto-dokter {
+        height: 300px !important;
+    }
+
+    .dokter-umum-card img,
+    .dokter-anak-card img,
+    .dokter-kandungan-card img,
+    .dokter-bedah-card img,
+    .dokter-dalam-card img,
+    .dokter-laboratorium-card img,
+    .dokter-anak-photo img,
+    .dokter-kandungan-photo img,
+    .dokter-bedah-photo img,
+    .dokter-dalam-photo img,
+    .dokter-laboratorium-photo img {
+        height: 300px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+}
+
+/* ============================================================
+   PERBAIKAN KHUSUS POLI KANDUNGAN
+   Override aturan lama yang memakai object-fit: cover !important
+   Foto tetap utuh dan tidak terpotong.
+   ============================================================ */
+
+body.dokter-kandungan-body .dokter-kandungan-photo img {
+    width: 100% !important;
+    height: 340px !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #e7f5f7 !important;
+    border-radius: 18px !important;
+}
+
+@media (max-width: 700px) {
+    body.dokter-kandungan-body .dokter-kandungan-photo img {
+        height: 340px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body.dokter-kandungan-body .dokter-kandungan-photo img {
+        height: 300px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+}
